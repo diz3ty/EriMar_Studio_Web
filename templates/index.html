@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>EriMar Studio</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-        <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="500" height="250" loading="lazy"
-             srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
-        <h1>Bienvenida a EriMar Studio</h1>
-        <p>Tu espacio de belleza y cuidado personal</p>
-    </div>
-  </header>
+    <header class = "main-header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
+                srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+            <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
+            <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+    </header>
   <main>
     <h2>Servicios</h2>
     <ul>
