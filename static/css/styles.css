@@ -2,12 +2,11 @@
 /* Global Styles */
 body {
   background-color: #ffe6f8;
-  color: #333;
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
 }
 
 /* Main Styles */
@@ -16,8 +15,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: .8rem;
+  padding: 1rem;
 }
 
 /* Header Styles */
@@ -25,6 +23,7 @@ main {
   background-color: #ffedfa;
   padding: 1rem 2rem;
   border-bottom: 2px solid #ffd1f2;
+  width: 100%;
 }
 
 .navbar {
@@ -47,7 +46,7 @@ main {
   gap: 5rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  font-weight: bold;
 }
 
 .nav-links li a {
@@ -62,7 +61,6 @@ main {
 }
 
 .cta-container {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -70,9 +68,7 @@ main {
 .btn-reserva {
   background-color: #fac8e9;
   color: #6c2a6a;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 1rem 1rem;
   font-weight: bold;
   font-size: 1rem;
   transition: background-color 0.3s ease;
@@ -82,7 +78,7 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -90,7 +86,7 @@ main {
   }
 
   .nav-links {
-    flex: 2;
+    flex: 10;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -110,10 +106,9 @@ main {
   }
 }
 
-/* init section */
+/* inicio section */
 .inicio {
-  width: 100vw;
-  height: 70vh;
+  width: 110vw;
   background-image: url('/static/images/EriMar.jpg');
   background-size: cover;
   background-position: center;
@@ -122,40 +117,38 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #6c2a6a;
 }
 
 .inicio-overlay {
   padding: 2rem;
   border-radius: 15px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .inicio h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #fae6f3;
   margin-bottom: 1rem;
-  font-weight: 600;
-  font-family:'Libre Baskerville', 'Georgia', serif;
 }
 
 .inicio p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fae6f3;
-  font-family:'Libre Baskerville', 'Georgia', serif;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
+  .inicio {
+    padding: 2rem 1rem;
+  }
+
   .inicio h1 {
-    font-size: 1.5rem;
+    font-size: 1.2;
   }
 
   .inicio p {
-    font-size: 1rem;
-  }
-
-  .inicio {
-    height: auto;
-    padding: 2rem 1rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -179,13 +172,17 @@ main {
 }
 
 .nosotros-texto h2 {
-  font-size: 2rem;
+  border-bottom: 2px solid #6c2a6a;
   color: #6c2a6a;
-  margin-bottom: 1.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .nosotros-texto p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -203,7 +200,7 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .nosotros-container {
     flex-direction: column;
     text-align: center;
@@ -222,16 +219,18 @@ main {
 /* servicios section */
 .servicios {
   background-color: #ffedfa;
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'Libre Baskerville', 'Georgia', serif;
+  padding: 3rem 1rem;
   width: 100%;
 }
 
 .servicios h2 {
-  font-size: 2.5rem;
+  border-bottom: 2px solid #6c2a6a;
   color: #6c2a6a;
-  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
 }
 
 .servicios-container {
@@ -239,10 +238,11 @@ main {
   justify-content: space-around;
   gap: 10rem;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .servicio {
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 300px;
   flex: 1;
   transition: transform 0.3s ease;
@@ -264,12 +264,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.servicio p {
-  font-size: 1rem;
-  color: #6c2a6a;
-  line-height: 1.5;
-}
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .servicios-container {
     flex-direction: column;
     align-items: center;
@@ -282,16 +277,18 @@ main {
 
 /* Promo section */
 .promociones {
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   text-align: center;
-  font-family: 'Libre Baskerville', 'Georgia', serif;
-  width: 100%;
 }
 
 .promociones h2 {
-  font-size: 2.5rem;
+  border-bottom: 2px solid #6c2a6a;
   color: #6c2a6a;
+  display: inline-block;
+  font-size: 2rem;
   margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .promociones-container {
@@ -327,6 +324,7 @@ main {
 }
 
 .precio {
+  font-size: 0.8rem;
   display: block;
   font-weight: bold;
   color: #6c2a6a;
@@ -347,7 +345,7 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .promociones-container {
     flex-direction: column;
     align-items: center;
@@ -361,19 +359,19 @@ main {
 /* ubication section */
 .ubicacion {
   background-color: #ffedfa;
-  padding: 4rem 2rem;
-  font-family: 'Libre Baskerville', 'Georgia', serif;
+  padding: 3rem 1rem;
+  text-align: center;
   width: 100%;
 }
 
 .ubicacion h2 {
-  font-size: 2rem;
-  color: #6c2a6a;
-  text-align: center;
-  margin-bottom: 2rem;
   border-bottom: 2px solid #6c2a6a;
-  display: inline-block;
+  color: #6c2a6a;
+  
+  font-size: 2rem;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+  text-align: right;
 }
 
 .ubicacion-container {
@@ -395,7 +393,7 @@ main {
   flex: 2;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .ubicacion-container {
     flex-direction: column;
     align-items: center;
@@ -410,18 +408,19 @@ main {
 
 /*contact section */
 .contacto {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
-  font-family: 'Libre Baskerville', 'Georgia', serif;
+  color: #333;
 }
 
 .contacto h2 {
-  font-size: 2rem;
-  color: #6c2a6a;
-  margin-bottom: 2rem;
   border-bottom: 2px solid #6c2a6a;
+  color: #6c2a6a;
   display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .iconos-redes {
@@ -455,7 +454,7 @@ main {
   transform: scale(1.1);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .iconos-redes {
     flex-direction: column;
     gap: 1.5rem;
@@ -464,15 +463,14 @@ main {
 
 /* Footer Styles */
 footer {
-  background-color: #ffedfa;   /* color suave de fondo */
+  background-color: #ffedfa;
   padding: 1.5rem;
-  text-align: center;          /* centra el texto */
-  font-family: 'Libre Baskerville', 'Georgia', serif;
+  text-align: center;
   color: #6c2a6a;
   border-top: 2px solid #ffd1f2;
 }
 
 footer p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
