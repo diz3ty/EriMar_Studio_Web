@@ -68,7 +68,7 @@ main {
 
 .btn-reserva {
   background-color: #fac8e9;
-  color: 6c2a6a;
+  color: #6c2a6a;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -85,7 +85,7 @@ main {
   .navbar {
     flex-direction: column;
     align-items: center;
-    height: 600px;
+    height: 300px;
   }
 
   .nav-links {
@@ -342,7 +342,7 @@ main {
 
 .btn-promo {
   background-color: #fac8e9;
-  color: 6c2a6a;
+  color: #6c2a6a;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
