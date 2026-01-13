@@ -81,7 +81,7 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -103,7 +103,7 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .cta-container {
     margin-top: 1rem;
     justify-content: center;
@@ -151,7 +151,7 @@ main {
   font-family:'Libre Baskerville', 'Georgia', serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .inicio h1 {
     font-size: 1.5rem;
   }
@@ -210,7 +210,7 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .nosotros-container {
     flex-direction: column;
     text-align: center;
@@ -276,7 +276,7 @@ main {
   color: #6c2a6a;
   line-height: 1.5;
 }
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .servicios-container {
     flex-direction: column;
     align-items: center;
@@ -353,7 +353,7 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .promociones-container {
     flex-direction: column;
     align-items: center;
@@ -386,14 +386,14 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .ubicacion-texto {
   flex: 1;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
@@ -401,7 +401,7 @@ main {
   flex: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .ubicacion-container {
     flex-direction: column;
     align-items: center;
@@ -461,7 +461,7 @@ main {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .iconos-redes {
     flex-direction: column;
     gap: 1.5rem;
