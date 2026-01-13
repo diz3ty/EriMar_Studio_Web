@@ -85,6 +85,7 @@ main {
   .navbar {
     flex-direction: column;
     align-items: center;
+    height: 600px;
   }
 
   .nav-links {
@@ -151,18 +152,18 @@ main {
   font-family:'Libre Baskerville', 'Georgia', serif;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
   .inicio h1 {
     font-size: 1.5rem;
   }
 
   .inicio p {
-    font-size: .5rem;
+    font-size: 1rem;
   }
 
   .inicio {
     height: auto;
-    padding: 1rem .5rem;
+    padding: 2rem 1rem;
   }
 }
 
