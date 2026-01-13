@@ -225,3 +225,260 @@ main {
     margin-top: 1.5rem;
   }
 }
+
+/* servicios section */
+.servicios {
+  background-color: #ffedfa;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  width: 100%;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.servicios-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10rem;
+  flex-wrap: wrap;
+}
+
+.servicio {
+  padding: 2rem;
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+}
+
+.servicio img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.servicio h3 {
+  font-size: 1.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.servicio p {
+  font-size: 1rem;
+  color: #6c2a6a;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .servicios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio {
+    max-width: 90%;
+  }
+}
+
+/* Promo section */
+.promociones {
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+}
+
+.promociones h2 {
+  font-size: 2.5rem;
+  color: #6c2a6a;
+  margin-bottom: 2rem;
+}
+
+.promociones-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.promo-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-card h3 {
+  font-size: 1.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.promo-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.precio {
+  display: block;
+  font-weight: bold;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.btn-promo {
+  background-color: #fac8e9;
+  color: 6c2a6a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-promo:hover {
+  background-color: #ffb2fb;
+}
+
+@media (max-width: 768px) {
+  .promociones-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-card {
+    max-width: 90%;
+  }
+}
+
+/* ubication section */
+.ubicacion {
+  background-color: #ffedfa;
+  padding: 4rem 2rem;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  width: 100%;
+}
+
+.ubicacion h2 {
+  font-size: 2rem;
+  color: #6c2a6a;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #6c2a6a;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.ubicacion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ubicacion-texto {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.ubicacion-mapa {
+  flex: 2;
+}
+
+@media (max-width: 768px) {
+  .ubicacion-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ubicacion-mapa {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+/*contact section */
+.contacto {
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  color: #6c2a6a;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #6c2a6a;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.iconos-redes a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.iconos-redes a:hover {
+  transform: translateY(-5px);
+  color: #d46fa3;
+}
+
+.iconos-redes img {
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.iconos-redes a:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .iconos-redes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ffedfa;   /* color suave de fondo */
+  padding: 1.5rem;
+  text-align: center;          /* centra el texto */
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  color: #6c2a6a;
+  border-top: 2px solid #ffd1f2;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}

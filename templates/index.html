@@ -13,11 +13,11 @@
         </div>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#promociones">Promociones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#servicios">SERVICIOS</a></li>
+                <li><a href="#promociones">PROMOCIONES</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
             </ul>
             <div class="cta-container">
                 <a href="#reserva" class="btn-reserva">Reservar cita</a>
@@ -47,26 +47,80 @@
         </div>
         </div>
     </section>
-    <h2>Servicios</h2>
-    <ul>
-      <li>Uñas</li>
-      <li>Pestañas</li>
-      <li>Capilares</li>
-    </ul>
-    <section class="redes-sociales">
-        <h3>Síguenos en redes</h3>
+    <section class="servicios" id="servicios">
+        <h2>NUESTROS SERVICIOS</h2>
+            <div class="servicios-container">
+                <div class="servicio">
+                    <img src="/static/images/Uñas.webp" alt="Uñas">
+                    <h3>UÑAS</h3>
+                    <div class="vermas-uñas-container">
+                    <a href="#vermas-uñas" class="btn-vermas-uñas">Ver más</a>
+            </div>
+                </div>
+                <div class="servicio">
+                    <img src="/static/images/Pestañas.webp" alt="Pestañas">
+                    <h3>PESTAÑAS</h3>
+                    <div class="vermas-pestanas-container">
+                <a href="#vermas-pestanas" class="btn-vermas-pestanas">Ver más</a>
+            </div>
+                </div>
+                <div class="servicio">
+                    <img src="/static/images/Capilares.webp" alt="Capilares">
+                    <h3>CAPILARES</h3>
+                    <div class="vermas-capilares-container">
+                    <a href="#vermas-capilares" class="btn-vermas-capilares">Ver más</a>
+                </div>
+            </div>
+    </section>
+    <section class="promociones" id="promociones">
+        <h2>PROMOCIONES</h2>
+            <div class="promociones-container">
+                <div class="promo-card">
+                    <h3>✨ Paquete Uñas + Pestañas</h3>
+                    <p>Disfruta de un combo especial para manos y mirada.</p>
+                    <span class="precio">Sólo $600 MXN</span>
+                    <a href="#reserva" class="btn-promo">Reservar ahora</a>
+                </div>
+                <div class="promo-card">
+                    <h3>💆 Tratamiento Capilar</h3>
+                    <p>Cambia tu estilo de cabello con un 20% de descuento en keratinas.</p>
+                    <span class="precio">Antes $600 MXN, ahora $480 MXN</span>
+                    <a href="#reserva" class="btn-promo">Reservar ahora</a>
+                </div>
+                <div class="promo-card">
+                    <h3>🎀 Promoción de Bienvenida</h3>
+                    <p>Primera cita con 10% de descuento en cualquier servicio.</p>
+                    <span class="precio">Aplica en tu primera visita</span>
+                    <a href="#reserva" class="btn-promo">Reservar ahora</a>
+                </div>
+            </div>
+    </section>
+    <section class="ubicacion" id="ubicacion">
+        <h2>Nuestra Ubicación</h2>
+        <div class="ubicacion-container">
+            <div class="ubicacion-texto">
+            <p>📍 Nos encontramos en:</p>
+            <p><strong>Av. Pablo Cabrera, Col Centro, San Juan del Río, Qro, México</strong></p>
+            <p>Visítanos y vive la experiencia en EriMar Studio.</p>
+            <a href="https://maps.app.goo.gl/MZTjKYDnnuxyWogG8" target="_blank" class="btn-mapa">Ver en Google Maps</a>
+            </div>
+        </div>
+    </section>
+    <section class="contacto" id="contacto">
+        <h2>CONTACTANOS Y SIGUENOS EN REDES SOCIALES</h2>
+        <p>Visitanos, regalanos tu like y comparte tu experiencia.</p>
             <div class="iconos-redes">
                 <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank" aria-label="Instagram">
-                    <img src="{{ url_for('static', filename='images/instagram.webp') }}" alt="Instagram" width="32" height="32" loading="lazy">
-                        <span>Instagram</span>
+                <img src="{{ url_for('static', filename='images/instagram.webp') }}" alt="Instagram" width="32" height="32" loading="lazy">
+                <span>Instagram</span>
                 </a>
-                <a href="https://www.facebook.com/share/1EdKyCcACA/" target="Facebook" aria-label="Facebook">
-                    <img src="{{ url_for('static', filename='images/facebook.webp') }}" alt="Facebook" width="32" height="32" loading="lazy">
-                        <span>Facebook</span>
+                <a href="https://www.facebook.com/share/1EdKyCcACA/" target="_blank" aria-label="Facebook">
+                <img src="{{ url_for('static', filename='images/facebook.webp') }}" alt="Facebook" width="32" height="32" loading="lazy">
+                <span>Facebook</span>
                 </a>
-                <a href="https://wa.me/524271668565" target="WhatsApp" aria-label="WhatsApp">
-                    <img src="{{ url_for('static', filename='images/whatsapp.webp') }}" alt="WhatsApp" width="32" height="32" loading="lazy">
-                        <span>WhatsApp</span>
+                <a href="https://wa.me/524271668565" target="_blank" aria-label="WhatsApp">
+                <img src="{{ url_for('static', filename='images/whatsapp.webp') }}" alt="WhatsApp" width="32" height="32" loading="lazy">
+                <span>WhatsApp</span>
                 </a>
             </div>
     </section>
