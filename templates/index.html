@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>EriMar Studio</title>
-  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header>
@@ -18,7 +18,7 @@
       <li>Tratamientos faciales</li>
     </ul>
     <h2>Contacto</h2>
-    <p>Agenda tu cita en WhatsApp o visítanos en nuestro estudio.</p>
+    <p>Agenda tu cita por <a href="https://wa.me/TU_NUMERO">WhatsApp</a></p>
   </main>
   <footer>
     <p>&copy; 2026 EriMar Studio - erimarstudio.com</p>
