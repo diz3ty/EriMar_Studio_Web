@@ -64,7 +64,7 @@ main {
 .cta-container {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .btn-reserva {
@@ -103,21 +103,12 @@ main {
     margin-top: 1rem;
     justify-content: center;
   }
-}
-
-@media (max-width: 680px) {
-  .cta-container {
-    margin-top: 1rem;
-    justify-content: center;
-  }
 
   .btn-reserva {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 }
-
-
 
 /* init section */
 .inicio {
@@ -294,6 +285,7 @@ main {
   padding: 4rem 2rem;
   text-align: center;
   font-family: 'Libre Baskerville', 'Georgia', serif;
+  width: 100%;
 }
 
 .promociones h2 {
@@ -310,9 +302,9 @@ main {
 }
 
 .promo-card {
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 2rem;
+  padding: 1rem;
   max-width: 300px;
   flex: 1;
   transition: transform 0.3s ease;
