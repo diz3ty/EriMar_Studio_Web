@@ -6,19 +6,38 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <header>
-    <h1>EriMar Studio</h1>
-    <p>Tu espacio de belleza y cuidado personal</p>
+  <header class="hero">
+    <div class="overlay">
+        <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="500" height="250" loading="lazy"
+        srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
+      <h1>Bienvenida a EriMar Studio</h1>
+      <p>Tu espacio de belleza y cuidado personal</p>
+    </div>
   </header>
   <main>
     <h2>Servicios</h2>
     <ul>
-      <li>Manicure & Pedicure</li>
-      <li>Maquillaje profesional</li>
-      <li>Tratamientos faciales</li>
+      <li>Uñas</li>
+      <li>Pestañas</li>
+      <li>Capilares</li>
     </ul>
-    <h2>Contacto</h2>
-    <p>Agenda tu cita por <a href="https://wa.me/TU_NUMERO">WhatsApp</a></p>
+    <section class="redes-sociales">
+        <h3>Síguenos en redes</h3>
+            <div class="iconos-redes">
+                <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank" aria-label="Instagram">
+                    <img src="{{ url_for('static', filename='images/instagram.webp') }}" alt="Instagram" width="32" height="32" loading="lazy">
+                        <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/share/1EdKyCcACA/" target="Facebook" aria-label="Facebook">
+                    <img src="{{ url_for('static', filename='images/facebook.webp') }}" alt="Facebook" width="32" height="32" loading="lazy">
+                        <span>Facebook</span>
+                </a>
+                <a href="https://wa.me/524271668565" target="WhatsApp" aria-label="WhatsApp">
+                    <img src="{{ url_for('static', filename='images/whatsapp.webp') }}" alt="WhatsApp" width="32" height="32" loading="lazy">
+                        <span>WhatsApp</span>
+                </a>
+            </div>
+    </section>
   </main>
   <footer>
     <p>&copy; 2026 EriMar Studio - erimarstudio.com</p>
