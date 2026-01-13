@@ -35,8 +35,9 @@ main {
   width: 100%;
 }
 
-.logo-container {
+.logo-centered {
   flex: 1;
+  max-height: 300px;
 }
 
 .nav-links {
