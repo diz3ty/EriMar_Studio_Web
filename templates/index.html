@@ -7,7 +7,7 @@
 </head>
 <body>
     <header class = "main-header">
-        <div class="logo-container">
+        <div class="logo-centered">
             <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
                 srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
         </div>
@@ -20,10 +20,15 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-            <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
-            <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
     </header>
   <main>
+    <section class="inicio" id="inicio">
+        <div class="inicio-overlay">
+            <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
+            <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+        </div>
+    </section>
+
     <h2>Servicios</h2>
     <ul>
       <li>Uñas</li>

@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: right;
 }
 
 /* Main Styles */
@@ -29,19 +28,20 @@ main {
   border-bottom: 2px solid #ffd1f2;
 }
 
-h1, p{
-  position:relative;
-  color: #000000;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1rem;
-  font-family: 'Poppins', cursive;
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between; /* menú a la izquierda, logo a la derecha */
-  align-items: center;
+.logo-centered {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
 }
 
 .nav-links {
@@ -52,12 +52,85 @@ h1, p{
   padding: 0;
 }
 
-.logo-container {
-  flex-shrink: 0;
+.nav-links li a {
+  text-decoration: none;
+  color: #6c2a6a;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.logo {
-  width: 200px;
-  height: auto;
+.nav-links li a:hover {
+  color: #f9c5ff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+/* init section */
+.inicio {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('/static/images/EriMar.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.inicio-overlay {
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 90%;
+}
+
+.inicio h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family:'Libre Baskerville', 'Georgia', serif;
+}
+
+.inicio p {
+  font-size: 2rem;
+  color: #ffffff;
+  /* Opciones formales:
+    A: 'Merriweather', 'Georgia', 'Times New Roman', serif
+    B: 'Playfair Display', 'Georgia', serif
+    C: 'Libre Baskerville', 'Georgia', serif
+  */
+  font-family:'Libre Baskerville', 'Georgia', serif;
+}
+
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 1.5rem;
+  }
+
+  .inicio p {
+    font-size: 1rem;
+  }
+
+  .inicio {
+    height: auto;
+    padding: 2rem 1rem;
+  }
 }
 
