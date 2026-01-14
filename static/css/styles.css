@@ -109,7 +109,7 @@ main {
 /* inicio section */
 .inicio {
   width: 100%;
-  background-image: url('/static/images/EriMar.jpg');
+  background-image: url('/static/images/EriMar_Logo.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -128,13 +128,13 @@ main {
 
 .inicio h1 {
   font-size: 4rem;
-  color: #fae6f3;
+  color: #6c2a6a;
   margin-bottom: 1rem;
 }
 
 .inicio p {
   font-size: 1.5rem;
-  color: #fae6f3;
+  color: #6c2a6a;
 }
 
 @media (max-width: 768px) {
@@ -236,17 +236,18 @@ main {
 .servicios-container {
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 
 .servicio {
-  padding: 4rem;
-  max-width: 100px;
+  padding: 2rem;
+  max-width: 300px;
+  width: 100%;
   transition: transform 0.3s ease;
   position : relative;
   text-align: center;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .servicio:hover {
@@ -281,10 +282,24 @@ main {
   .servicios-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 
   .servicio {
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .servicio img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .servicio h3 {
+    text-align: center;
   }
 }
 

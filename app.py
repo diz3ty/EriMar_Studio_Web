@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
+
 @app.route('/servicio/uñas')
 def servicio_uñas():
     return render_template('nails_services.html')
