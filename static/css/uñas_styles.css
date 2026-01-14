@@ -12,7 +12,7 @@ body {
 .logo-container {
   flex: 1;
   max-height: 300px;
-  background-image: url('/static/images/EriMar_Logo.webp');
+  background-image: url('/static/images/EriMar.jpg');
   align-items: center;
   justify-content: center;
   text-align: center;
