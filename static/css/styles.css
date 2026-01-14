@@ -128,13 +128,13 @@ main {
 
 .inicio h1 {
   font-size: 4rem;
-  color: #6c2a6a;
+  color: #ffedfa;
   margin-bottom: 1rem;
 }
 
 .inicio p {
   font-size: 1.5rem;
-  color: #6c2a6a;
+  color: #ffedfa;
 }
 
 @media (max-width: 768px) {
