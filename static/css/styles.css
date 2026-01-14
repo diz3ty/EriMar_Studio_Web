@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
+  width: 100%;
 }
 
 /* Main Styles */
@@ -21,7 +22,6 @@ main {
 /* Header Styles */
 .main-header {
   background-color: #ffedfa;
-  padding: 1rem 2rem;
   border-bottom: 2px solid #ffd1f2;
   width: 100%;
 }
@@ -108,7 +108,7 @@ main {
 
 /* inicio section */
 .inicio {
-  width: 110vw;
+  width: 100%;
   background-image: url('/static/images/EriMar.jpg');
   background-size: cover;
   background-position: center;
@@ -116,7 +116,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   margin-bottom: 2rem;
   border-bottom: 2px solid #6c2a6a;
 }
@@ -161,7 +160,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   gap: 2rem;
 }
@@ -182,7 +181,7 @@ main {
 }
 
 .nosotros-texto p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -198,6 +197,7 @@ main {
   max-width: 450px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -235,18 +235,19 @@ main {
 
 .servicios-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10rem;
   flex-wrap: wrap;
-  text-align: center;
 }
 
 .servicio {
-  padding: 1.5rem;
-  max-width: 300px;
+  padding: 1rem;
+  max-width: 100px;
   flex: 1;
   transition: transform 0.3s ease;
   position : relative;
+  text-align: center;
+  width: 100%;
 }
 
 .servicio:hover {
@@ -254,9 +255,12 @@ main {
 }
 
 .servicio img {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-bottom: 1rem;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .servicio h3 {
@@ -269,6 +273,7 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
+  text-align: center;
 }
 .servicio-link:hover .servicio {
   transform: translateY(-5px);
@@ -282,7 +287,7 @@ main {
   }
 
   .servicio {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -384,7 +389,7 @@ main {
   }
 
   .promo-card {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -410,7 +415,7 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
 }
 
