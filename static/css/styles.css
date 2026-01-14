@@ -109,7 +109,7 @@ main {
 /* inicio section */
 .inicio {
   width: 100%;
-  background-image: url('/static/images/EriMar_Logo.webp');
+  background-image: url('/static/images/EriMar.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
