@@ -9,44 +9,44 @@
 </head>
 <body>
   <header class = "main-header">
-    <div class="logo-container">
-      <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
-        srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
+    <div class="titulo-servicio-container">
+      <h1 class="titulo-servicio">Nuestros Servicios de Cejas</h1>
+      <p>Como quieres resaltar la belleza de tus manos?</p>
     </div>
     <nav class="navbar">
-            <ul class="nav-links">
-              <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
-              <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-              <li><a href="{{ url_for('index') }}#servicios">SERVICIOS</a></li>
-              <li><a href="{{ url_for('index') }}#promociones">PROMOCIONES</a></li>
-              <li><a href="{{ url_for('index') }}#contacto">CONTACTO</a></li>
-            </ul>
-            <div class="cta-container">
-            <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-                target="_blank"
-                class="btn-reserva">
-                Reservar cita
-            </a>
-            </div>
-        </nav>
-    <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios de Pestañas</h1>
-      <p>Como quieres relucir tu mirada?</p>
-    </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+            <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">SERVICIOS</a></li>
+            <li><a href="{{ url_for('index') }}#promociones">PROMOCIONES</a></li>
+            <li><a href="{{ url_for('index') }}#contacto">CONTACTO</a></li>
+        </ul>
+        <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+            target="_blank"
+            class="btn-reserva">
+            Reservar cita
+        </a>
+        </div>
+    </nav>
   </header>
-
+  <main>
   <section class="servicio-detalle">
-    <img src="/static/images/Laminado_ceja_2.jpeg" alt="Servicio de cejas">
+    <img src="/static/images/Cejas.jpg" alt="Servicio de Cejas">
     <h2>¿Qué incluye?</h2>
     <ul>
-      <li>Extensiones clásicas y volumen</li>
-      <li>Lifting de pestañas</li>
-      <li>Tinte de pestañas</li>
-      <li>Asesoría personalizada</li>
+      <li>Manicure y pedicure</li>
+      <li>Aplicación de gel</li>
+      <li>Decoración personalizada</li>
+      <li>Tratamiento fortalecedor</li>
     </ul>
-    <p><strong>Duración:</strong> 120 minutos</p>
-    <p><strong>Precio:</strong> $500 MXN</p>
+    <p><strong>Duración:</strong> 90 minutos</p>
+    <p><strong>Precio:</strong> $350 MXN</p>
     <a href="/contacto.html" class="btn">Reservar cita</a>
   </section>
+  </main>
+  <footer class="main-footer">
+    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

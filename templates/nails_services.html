@@ -9,6 +9,10 @@
 </head>
 <body>
   <header class = "main-header">
+    <div class="titulo-servicio-container">
+      <h1 class="titulo-servicio">Nuestros Servicios de Uñas</h1>
+      <p>Como quieres resaltar la belleza de tus manos?</p>
+    </div>
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
@@ -25,11 +29,8 @@
         </a>
         </div>
     </nav>
-    <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios de Uñas</h1>
-      <p>Como quieres resaltar la belleza de tus manos?</p>
-    </div>
   </header>
+  <main>
   <section class="servicio-detalle">
     <img src="/static/images/uñas.jpg" alt="Servicio de uñas">
     <h2>¿Qué incluye?</h2>
@@ -43,5 +44,9 @@
     <p><strong>Precio:</strong> $350 MXN</p>
     <a href="/contacto.html" class="btn">Reservar cita</a>
   </section>
+  </main>
+  <footer class="main-footer">
+    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

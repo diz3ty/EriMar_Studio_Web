@@ -4,47 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Promociones</title>
-  <link rel="stylesheet" href="/static/css/uñas_styles.css">
+  <link rel="stylesheet" href="/static/css/promociones_styles.css">
   <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
   <header class = "main-header">
-    <div class="logo-container">
-      <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
-        srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
-    </div>
-    <nav class="navbar">
-            <ul class="nav-links">
-              <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
-              <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-              <li><a href="{{ url_for('index') }}#servicios">SERVICIOS</a></li>
-              <li><a href="{{ url_for('index') }}#promociones">PROMOCIONES</a></li>
-              <li><a href="{{ url_for('index') }}#contacto">CONTACTO</a></li>
-            </ul>
-            <div class="cta-container">
-            <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-                target="_blank"
-                class="btn-reserva">
-                Reservar cita
-            </a>
-            </div>
-        </nav>
     <div class="titulo-servicio-container">
       <h1 class="titulo-servicio">Nuestras Promociones</h1>
-      <p>Cual eliges?</p>
+      <p>Como quieres resaltar la belleza de tus manos?</p>
     </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+            <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">SERVICIOS</a></li>
+            <li><a href="{{ url_for('index') }}#promociones">PROMOCIONES</a></li>
+            <li><a href="{{ url_for('index') }}#contacto">CONTACTO</a></li>
+        </ul>
+        <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+            target="_blank"
+            class="btn-reserva">
+            Reservar cita
+        </a>
+        </div>
+    </nav>
   </header>
-
-  <section class="promociones">
-    <div class="promociones-container">
-      <div class="promo-card">
-        <h3>Combo Facial + Capilar</h3>
-        <p>Relaja tu piel y revitaliza tu cabello en una sola sesión.</p>
-        <span class="precio">$750 MXN</span>
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20el%20combo%20facial%20capilar" target="_blank" class="btn-promo">Reservar cita</a>
-      </div>
-      <!-- Agrega más promociones aquí -->
-    </div>
+  <main>
+  <section class="servicio-detalle">
+    <img src="/static/images/Promociones.jpg" alt="Servicio de Promociones">
+    <h2>¿Qué incluye?</h2>
+    <ul>
+      <li>Manicure y pedicure</li>
+      <li>Aplicación de gel</li>
+      <li>Decoración personalizada</li>
+      <li>Tratamiento fortalecedor</li>
+    </ul>
+    <p><strong>Duración:</strong> 90 minutos</p>
+    <p><strong>Precio:</strong> $350 MXN</p>
+    <a href="/contacto.html" class="btn">Reservar cita</a>
   </section>
+  </main>
+  <footer class="main-footer">
+    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
