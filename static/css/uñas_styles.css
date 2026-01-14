@@ -1,0 +1,32 @@
+/* Global Styles */
+body {
+  background-color: #ffe6f8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  width: 100%;
+}
+
+.logo-container {
+  flex: 1;
+  max-height: 300px;
+}
+
+/* Header Styles */
+.titulo-servicio-container {
+  text-align: center;
+}
+
+.titulo-servicio {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.titulo-servicio p {
+  text-align: center;
+}

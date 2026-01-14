@@ -241,9 +241,8 @@ main {
 }
 
 .servicio {
-  padding: 1rem;
+  padding: 4rem;
   max-width: 100px;
-  flex: 1;
   transition: transform 0.3s ease;
   position : relative;
   text-align: center;
@@ -255,7 +254,7 @@ main {
 }
 
 .servicio img {
-  width: 200px;
+  width: 250px;
   height: auto;
   margin-bottom: 1rem;
   justify-content: center;
@@ -273,12 +272,10 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
-  text-align: center;
 }
 .servicio-link:hover .servicio {
   transform: translateY(-5px);
 }
-
 
 @media (max-width: 768px) {
   .servicios-container {

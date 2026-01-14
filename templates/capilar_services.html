@@ -3,13 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capilares - Erimar Studio</title>
+  <title>Capilares</title>
+  <link rel="stylesheet" href="/static/css/uñas_styles.css">
   <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Tratamientos Capilares</h1>
-    <p>Cuida y revitaliza tu cabello con nuestros tratamientos especializados.</p>
+  <header class = "main-header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
+        srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
+    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#promociones">PROMOCIONES</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+        <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+            target="_blank"
+            class="btn-reserva">
+            Reservar cita
+        </a>
+        </div>
+    </nav>
+    <div class="titulo-servicio-container">
+      <h1 class="titulo-servicio">Nuestros Servicios Capilares</h1>
+      <p>Como prefieres darle luz a tu cabello?</p>
+    </div>
   </header>
 
   <section class="servicio-detalle">
