@@ -246,6 +246,7 @@ main {
   max-width: 300px;
   flex: 1;
   transition: transform 0.3s ease;
+  position : relative;
 }
 
 .servicio:hover {
@@ -263,6 +264,16 @@ main {
   color: #6c2a6a;
   margin-bottom: 1rem;
 }
+
+.servicio-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.servicio-link:hover .servicio {
+  transform: translateY(-5px);
+}
+
 
 @media (max-width: 768px) {
   .servicios-container {
@@ -345,6 +356,27 @@ main {
   background-color: #ffb2fb;
 }
 
+.vermas-promos-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.promos-link {
+  background-color: #fac8e9;
+  color: #6c2a6a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.promos-link:hover {
+  background-color: #ffb2fb;
+}
+
+
 @media (max-width: 768px) {
   .promociones-container {
     flex-direction: column;
@@ -367,7 +399,6 @@ main {
 .ubicacion h2 {
   border-bottom: 2px solid #6c2a6a;
   color: #6c2a6a;
-  
   font-size: 2rem;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;

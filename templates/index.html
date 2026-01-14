@@ -21,8 +21,7 @@
             <div class="cta-container">
             <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
                 target="_blank"
-                class="btn-reserva"
-                img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}">
+                class="btn-reserva">
                 Reservar cita
             </a>
             </div>
@@ -54,26 +53,24 @@
     <section class="servicios" id="servicios">
         <h2>NUESTROS SERVICIOS</h2>
             <div class="servicios-container">
-                <div class="servicio">
-                    <img src="/static/images/Uñas.webp" alt="Uñas">
-                    <h3>UÑAS</h3>
-                    <div class="vermas-uñas-container">
-                    <a href="#vermas-uñas" class="btn-vermas-uñas">Ver más</a>
-            </div>
-                </div>
-                <div class="servicio">
-                    <img src="/static/images/Pestañas.webp" alt="Pestañas">
-                    <h3>PESTAÑAS</h3>
-                    <div class="vermas-pestanas-container">
-                <a href="#vermas-pestanas" class="btn-vermas-pestanas">Ver más</a>
-            </div>
-                </div>
-                <div class="servicio">
-                    <img src="/static/images/Capilares.webp" alt="Capilares">
-                    <h3>CAPILARES</h3>
-                    <div class="vermas-capilares-container">
-                    <a href="#vermas-capilares" class="btn-vermas-capilares">Ver más</a>
-                </div>
+                <a href="{{ url_for('servicio_uñas') }}" target="_blank" class="servicio-link">
+                    <div class="servicio">
+                        <img src="/static/images/Uñas.webp" alt="Uñas">
+                        <h3>UÑAS</h3>
+                    </div>
+                </a>
+                <a href="{{ url_for('servicio_pestañas') }}" target="_blank" class="servicio-link">
+                    <div class="servicio">
+                        <img src="/static/images/Pestañas.webp" alt="Pestañas">
+                        <h3>PESTAÑAS</h3>
+                    </div>
+                </a>
+                <a href="{{ url_for('servicio_capilares') }}" target="_blank" class="servicio-link">
+                    <div class="servicio">
+                        <img src="/static/images/Capilares.webp" alt="Capilares">
+                        <h3>CAPILARES</h3>
+                    </div>
+                </a>
             </div>
     </section>
     <section class="promociones" id="promociones">
@@ -111,7 +108,11 @@
                         Reservar cita
                     </a>
                 </div>
-                
+                </div>
+                <div class="vermas-promos-container">
+                    <a href="{{ url_for('promociones') }}" target="_blank" class="promos-link">
+                        Ver más
+                    </a>
                 </div>
             </div>
     </section>
