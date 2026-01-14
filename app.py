@@ -22,6 +22,10 @@ def servicio_pestañas():
 def servicio_capilares():
     return render_template('capilar_services.html')
 
+@app.route('/servicio/cejas')
+def servicio_cejas():
+    return render_template('cejas_services.html')
+
 @app.route('/promociones')
 def promociones():
     return render_template('promociones.html')
