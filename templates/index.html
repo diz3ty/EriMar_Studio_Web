@@ -8,16 +8,59 @@
 <body>
     <header class = "main-header">
         <div class="logo-centered">
-            <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="200" height="100" loading="lazy"
+            <img src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}" alt="EriMar Studio" class="logo" width="250" height="150" loading="lazy"
                 srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x">
         </div>
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#nosotros">NOSOTROS</a></li>
-                <li><a href="#servicios">SERVICIOS</a></li>
-                <li><a href="#promociones">PROMOCIONES</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+                <li class="menu-servicios">
+                    <a href="#servicios">SERVICIOS</a>
+                    <ul class="submenu">
+                        <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
+                        <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
+                        <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
+                        <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
+                    </ul>
+                </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
+                <li class="menu-promociones">
+                    <a href="#promociones">PROMOCIONES</a>
+                    <ul class="submenu">
+                        <li><a href="{{ url_for('index') }}#promociones">Promociones</a></li>
+                        <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+                    </ul>
+                </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
+                <li class="menu-contacto">
+              <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+              <ul class="submenu">
+                <li><a href="https://instagram.com/erimar_studio" target="_blank">Instagram</a></li>
+                <li><a href="https://facebook.com/erimar.studio" target="_blank">Facebook</a></li>
+                <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
+                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+              </ul>
+            </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
             </ul>
             <div class="cta-container">
             <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
@@ -114,7 +157,7 @@
                 </div>
                 <div class="vermas-promos-container">
                     <a href="{{ url_for('promociones') }}" class="promos-link">
-                        Ver más
+                        Ver todas
                     </a>
                 </div>
             </div>

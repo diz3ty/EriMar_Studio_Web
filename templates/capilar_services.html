@@ -4,23 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capilares</title>
-  <link rel="stylesheet" href="/static/css/capilares_styles.css">
-  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/service_promo_styles.css">
 </head>
 <body>
   <header class = "main-header">
     <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios de Capilares</h1>
-      <p>Como quieres resaltar la belleza de tus manos?</p>
+      <h1 class="titulo-servicio">Nuestros Servicios Capilares</h1>
+      <p>Como quieres dar luz a tu cabello?</p>
     </div>
+    </header>
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
             <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-            <li><a href="{{ url_for('index') }}#servicios">SERVICIOS</a></li>
-            <li><a href="{{ url_for('index') }}#promociones">PROMOCIONES</a></li>
-            <li><a href="{{ url_for('index') }}#contacto">CONTACTO</a></li>
-        </ul>
+            <li class="menu-servicios">
+                    <a href="#servicios">SERVICIOS</a>
+                    <ul class="submenu">
+                        <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
+                        <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
+                        <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
+                        <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
+                    </ul>
+                </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
+                <li class="menu-promociones">
+                    <a href="#promociones">PROMOCIONES</a>
+                    <ul class="submenu">
+                        <li><a href="{{ url_for('index') }}#promociones">Promociones</a></li>
+                        <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+                    </ul>
+                </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
+                <li class="menu-contacto">
+              <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+              <ul class="submenu">
+                <li><a href="https://instagram.com/erimar_studio" target="_blank">Instagram</a></li>
+                <li><a href="https://facebook.com/erimar.studio" target="_blank">Facebook</a></li>
+                <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
+                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+              </ul>
+            </li>
+                <script>
+                function toggleSubmenu(e) {
+                  e.preventDefault();
+                  const submenu = e.target.nextElementSibling;
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+                </script>
+            </ul>
         <div class="cta-container">
         <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
             target="_blank"
@@ -29,20 +72,65 @@
         </a>
         </div>
     </nav>
-  </header>
   <main>
-  <section class="servicio-detalle">
-    <img src="/static/images/Capilares.jpg" alt="Servicio de Capilares">
-    <h2>¿Qué incluye?</h2>
+  <section class="servicios-cards">
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <div class="contenido-card">
+        <h2>Tratamiento Capilar</h2>
+        <p>Limpieza + Tratamiento</p>
+        <p><strong>Duración:</strong> 60 minutos</p>
+        <p><strong>Precio:</strong> $300 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Tratamiento%20Capilar."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <div class="contenido-card">
+        <h2>Keratina Chocolate</h2>
+        <p>Manicure, gel<br>"1 Color".</p>
+        <p><strong>Duración:</strong> 30 minutos</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Keratina%20Chocolate."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <div class="contenido-card">
+        <h2>Acrilicas Basicas</h2>
+        <p>Manicure, Acrilico, gel<br>"-#2 + Color".</p>
+        <p><strong>Duración:</strong> 180 minutos</p>
+        <p><strong>Precio:</strong> $400 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Acrilicas%20Basicas."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="consejos_consideraciones">
+    <h2>Consejos y Consideraciones</h2>
     <ul>
-      <li>Manicure y pedicure</li>
-      <li>Aplicación de gel</li>
-      <li>Decoración personalizada</li>
-      <li>Tratamiento fortalecedor</li>
+      <li>Consulta previa: Siempre es recomendable tener una consulta con nuestro estilista antes de cualquier tratamiento capilar para evaluar la salud de tu cabello y cuero cabelludo.</li>
+      <li>Cuidado posterior: Sigue las recomendaciones de cuidado posterior proporcionadas por nuestro equipo para mantener los resultados del tratamiento.</li>
+      <li>Frecuencia: Algunos tratamientos capilares requieren mantenimiento regular. Consulta con nuestro estilista sobre la frecuencia adecuada para tu tipo de cabello.</li>
+      <li>Alergias: Informa a nuestro equipo sobre cualquier alergia o sensibilidad que puedas tener a ciertos productos antes de iniciar el tratamiento.</li>
     </ul>
-    <p><strong>Duración:</strong> 90 minutos</p>
-    <p><strong>Precio:</strong> $350 MXN</p>
-    <a href="/contacto.html" class="btn">Reservar cita</a>
   </section>
   </main>
   <footer class="main-footer">

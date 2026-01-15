@@ -1,0 +1,433 @@
+/* Global Styles */
+body {
+  background-color: #ffe6f8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  width: 100%;
+}
+
+/* main Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Header */
+.main-header {
+  background-image: url('/static/images/EriMar.jpg'); /* fondo elegante */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #ffd1f2;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* permite que se ajuste si no cabe */
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #6c2a6a;
+}
+
+.nav-links li a:hover {
+  color: #f9c5ff;
+}
+
+/* Botón de reserva */
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-reserva {
+  background-color: #fac8e9;
+  color: #6c2a6a;
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* evita que se corte el texto */
+}
+
+.btn-reserva:hover {
+  background-color: #ffb2fb;
+}
+
+/* Título del servicio */
+.titulo-servicio-container {
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.titulo-servicio {
+  font-size: 2.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.titulo-servicio-container p {
+  font-size: 1.2rem;
+  color: #6c2a6a;
+  text-align: center;
+}
+
+/* Sección detalle */
+.servicio-detalle {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.servicio-detalle img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.servicio-detalle h2 {
+  font-size: 2rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.servicio-detalle ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.5rem;
+  max-width: 400px;
+  text-align: left;
+}
+
+.servicio-detalle ul li {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-detalle p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.servicio-detalle .btn {
+  background-color: #fac8e9;
+  color: #ffe6f8;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.servicio-detalle .btn:hover {
+  background-color: #ffb2fb;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #ffedfa;
+  padding: 1.5rem;
+  text-align: center;
+  color: #6c2a6a;
+  border-top: 2px solid #ffd1f2;
+}
+
+.main-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* mantiene menú y botón en línea */
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    font-size: 0.8rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-reserva {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+  }
+
+  .titulo-servicio {
+    font-size: 2rem;
+  }
+
+  .titulo-servicio-container p {
+    font-size: 1rem;
+  }
+
+  .servicio-detalle img {
+    max-width: 90%;
+  }
+
+  .servicio-detalle ul {
+    text-align: center;
+  }
+}
+
+/* cartas de servicios */
+.servicios-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.card-servicio {
+  margin-left: 1rem;
+  background-color: #ffedfa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-servicio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card-servicio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.contenido-card {
+  padding: 1rem;
+  text-align: center;
+}
+
+.contenido-card h2 {
+  color: #6c2a6a;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contenido-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+@media (  max-width: 768px){
+  .servicios-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-servicio {
+    width: 90%;
+  }
+  .card-servicio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* consejos y consideraciones */
+.consejos_consideraciones {
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .consejos_consideraciones {
+    padding: 1rem;
+    margin: 1rem;
+    text-size-adjust: auto;
+  }
+}
+
+.menu-servicios {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffe6f8;
+  border: 1px solid #ffd1f2;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: none;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu li a {
+  color: #6c2a6a;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #fac8e9;
+  border-radius: 4px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-servicios:hover .submenu {
+  display: block;
+}
+
+.menu-servicios:focus-within .submenu {
+  display: block;
+}
+
+.menu-promociones {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffe6f8;
+  border: 1px solid #ffd1f2;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: none;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu li a {
+  color: #6c2a6a;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #fac8e9;
+  border-radius: 4px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-promociones:hover .submenu {
+  display: block;
+}
+
+/* Para móvil: abrir al tocar */
+.menu-promociones:focus-within .submenu {
+  display: block;
+}
+
+.menu-contacto {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffe6f8;
+  border: 1px solid #ffd1f2;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: none;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu li a {
+  color: #6c2a6a;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #fac8e9;
+  border-radius: 4px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-contacto:hover .submenu {
+  display: block;
+}
+
+/* Para móvil: abrir al tocar */
+.menu-contacto:focus-within .submenu {
+  display: block;
+}
+
