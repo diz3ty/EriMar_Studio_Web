@@ -495,13 +495,34 @@ main {
   .servicio-detalle ul {
     text-align: center;
   }
+
   .servicios-cards {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
   }
+
   .card-servicio {
-    width: 90%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    font-size: 0.95rem;
   }
+
+  .card-servicio img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .contenido-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .contenido-card p {
+    font-size: 0.9rem;
+  }
+
   .card-servicio:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
