@@ -91,7 +91,6 @@ main {
 
 /* Título del servicio */
 .titulo-servicio-container {
-  padding: 2rem;
   border-radius: 12px;
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -99,7 +98,7 @@ main {
 
 .titulo-servicio {
   font-size: 2.5rem;
-  color: #6c2a6a;
+  color: #ffe6f8;
   margin-bottom: 1rem;
   font-weight: bold;
   text-align: center;
@@ -107,7 +106,7 @@ main {
 
 .titulo-servicio-container p {
   font-size: 1.2rem;
-  color: #6c2a6a;
+  color: #ffe6f8;
   text-align: center;
 }
 
@@ -431,3 +430,104 @@ main {
   display: block;
 }
 
+/* Promo section */
+.promociones {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.promociones h2 {
+  border-bottom: 2px solid #6c2a6a;
+  color: #6c2a6a;
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.promociones-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.promo-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-card h3 {
+  font-size: 1.5rem;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.promo-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.precio {
+  font-size: 0.8rem;
+  display: block;
+  font-weight: bold;
+  color: #6c2a6a;
+  margin-bottom: 1rem;
+}
+
+.btn-promo {
+  background-color: #fac8e9;
+  color: #6c2a6a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-promo:hover {
+  background-color: #ffb2fb;
+}
+
+.vermas-promos-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.promos-link {
+  background-color: #fac8e9;
+  color: #6c2a6a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.promos-link:hover {
+  background-color: #ffb2fb;
+}
+
+
+@media (max-width: 768px) {
+  .promociones-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-card {
+    max-width: 100%;
+  }
+}

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uñas</title>
+  <title>Pestañas</title>
   <link rel="stylesheet" href="/static/css/service_promo_styles.css">
 </head>
 <body>
   <header class = "main-header">
     <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios de Uñas</h1>
-      <p>Como quieres resaltar la belleza de tus manos?</p>
+      <h1 class="titulo-servicio">Nuestros Servicios de Pestañas</h1>
+      <p>Como quieres relucir tu mirada?</p>
     </div>
     </header>
     <nav class="navbar">
@@ -26,13 +26,6 @@
                         <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-promociones">
                     <a href="#promociones">PROMOCIONES</a>
                     <ul class="submenu">
@@ -40,13 +33,6 @@
                         <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-contacto">
               <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
               <ul class="submenu">
@@ -56,13 +42,6 @@
                 <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
               </ul>
             </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
             </ul>
         <div class="cta-container">
         <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
@@ -75,63 +54,15 @@
   <main>
   <section class="servicios-cards">
     <div class="card-servicio">
-      <img src="/static/images/Uñas.webp" alt="Servicio de uñas">
+      <img src="/static/images/Clasicas_1.jpeg" alt="Servicio de pestañas">
       <div class="contenido-card">
-        <h2>Manicure</h2>
-        <p>Limpieza, Forma, Exfoliacion y Tratamiento</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $300 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Manicure."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Baño_Gelish_2.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Baño de Gelish</h2>
-        <p>Manicure, gel<br>"1 Color".</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $350 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Baño%20de%20Gelish."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Uñas_acrilicas_2.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Acrilicas Basicas</h2>
-        <p>Manicure, Acrilico, gel<br>"-#2 + Color".</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $400 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Acrilicas%20Basicas."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Uñas_acrilicas_1.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Acrilicas Med</h2>
-        <p>Manicure, Acrilico, gel<br>"-#4 + Color + Detalle".</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
+        <h2>Clasicas</h2>
+        <p>Natural y discreto</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
         <p><strong>Precio:</strong> $450 MXN</p>
       </div>
       <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Acrilicas%20Med."
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Clasicas."
           target="_blank"
           class="btn-reserva">
           Reservar cita
@@ -139,15 +70,127 @@
       </div>
     </div>
     <div class="card-servicio">
-      <img src="/static/images/Uñas.webp" alt="Servicio de uñas">
+      <img src="/static/images/Volumen_2.jpeg" alt="Servicio de pestañas">
       <div class="contenido-card">
-        <h2>Acrilicas Lux</h2>
-        <p>Manicure, Acrilico, gel<br>"-#6 + Color + Detalles".</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $500 MXN</p>
+        <h2>Volumen</h2>
+        <p>Densidad y dramatismo</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
       </div>
       <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Acrilicas%20Lux."
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Volumen."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Mega_volumen_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Mega Volumen</h2>
+        <p>Ultra dramatico y glamuroso</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Mega%20Volumen."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Wispy_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Wispy</h2>
+        <p>Moderno y llamativo</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Wispy."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Hawaiano_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Hawaiano</h2>
+        <p>Alegre y expresiva</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Hawaiano."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Camelina_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Camelina</h2>
+        <p>Alargado y fino</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Camelina."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Egipcias_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Egipcias</h2>
+        <p>Intensa y misteriosa</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Egipcias."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Griego_2.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Griego</h2>
+        <p>volumen y longitud</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Griego."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Feather_1.jpeg" alt="Servicio de pestañas">
+      <div class="contenido-card">
+        <h2>Feather</h2>
+        <p>Fresco y juvenil</p>
+        <p><strong>Duración:</strong> 2 hrs.</p>
+        <p><strong>Precio:</strong> $450 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Feather."
           target="_blank"
           class="btn-reserva">
           Reservar cita
@@ -159,5 +202,25 @@
   <footer class="main-footer">
     <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
   </footer>
+  <script>
+    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
+    .forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+            return;
+        }
+
+        document.querySelectorAll('.submenu').forEach(sub => {
+            sub.style.display = 'none';
+        });
+
+        submenu.style.display = 'block';
+        });
+    });
+    </script>
 </body>
 </html>

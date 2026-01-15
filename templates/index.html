@@ -24,13 +24,6 @@
                         <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-promociones">
                     <a href="#promociones">PROMOCIONES</a>
                     <ul class="submenu">
@@ -38,13 +31,6 @@
                         <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-contacto">
               <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
               <ul class="submenu">
@@ -54,13 +40,6 @@
                 <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
               </ul>
             </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
             </ul>
             <div class="cta-container">
             <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
@@ -194,5 +173,25 @@
   <footer class="main-footer">
     <p>&copy; 2026 EriMar Studio - erimarstudio.com</p>
   </footer>
+  <script>
+    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
+    .forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+            return;
+        }
+
+        document.querySelectorAll('.submenu').forEach(sub => {
+            sub.style.display = 'none';
+        });
+
+        submenu.style.display = 'block';
+        });
+    });
+    </script>
 </body>
 </html>

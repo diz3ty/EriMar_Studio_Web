@@ -26,13 +26,6 @@
                         <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-promociones">
                     <a href="#promociones">PROMOCIONES</a>
                     <ul class="submenu">
@@ -40,13 +33,6 @@
                         <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
                     </ul>
                 </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
                 <li class="menu-contacto">
               <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
               <ul class="submenu">
@@ -56,13 +42,6 @@
                 <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
               </ul>
             </li>
-                <script>
-                function toggleSubmenu(e) {
-                  e.preventDefault();
-                  const submenu = e.target.nextElementSibling;
-                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-                }
-                </script>
             </ul>
         <div class="cta-container">
         <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
@@ -75,7 +54,7 @@
   <main>
   <section class="servicios-cards">
     <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilars">
       <div class="contenido-card">
         <h2>Tratamiento Capilar</h2>
         <p>Limpieza + Tratamiento</p>
@@ -91,15 +70,63 @@
       </div>
     </div>
     <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
       <div class="contenido-card">
-        <h2>Keratina Chocolate</h2>
-        <p>Manicure, gel<br>"1 Color".</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
+        <h2>Nano</h2>
+        <p>Cabello delicado</p>
+        <p><strong>Duración:</strong>3-4 hrs.</p>
         <p><strong>Precio:</strong> $600 MXN</p>
       </div>
       <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Keratina%20Chocolate."
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Nano."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
+      <div class="contenido-card">
+        <h2>Japonesa</h2>
+        <p>Cabello grueso</p>
+        <p><strong>Duración:</strong>3-4 hrs.</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Japonesa."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
+      <div class="contenido-card">
+        <h2>Brasileña</h2>
+        <p>Cabello rizado</p>
+        <p><strong>Duración:</strong> 3-45 hrs.</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Brasileña."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+      <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <div class="contenido-card">
+        <h2>Células</h2>
+        <p>Cabello decolorado</p>
+        <p><strong>Duración:</strong>3-4 hrs.</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Células."
           target="_blank"
           class="btn-reserva">
           Reservar cita
@@ -109,13 +136,29 @@
     <div class="card-servicio">
       <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
       <div class="contenido-card">
-        <h2>Acrilicas Basicas</h2>
-        <p>Manicure, Acrilico, gel<br>"-#2 + Color".</p>
-        <p><strong>Duración:</strong> 180 minutos</p>
-        <p><strong>Precio:</strong> $400 MXN</p>
+        <h2>Colágeno</h2>
+        <p>Cabello Reseco</p>
+        <p><strong>Duración:</strong>3-4 hrs.</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
       </div>
       <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Acrilicas%20Basicas."
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Colágeno."
+          target="_blank"
+          class="btn-reserva">
+          Reservar cita
+        </a>
+      </div>
+    </div>
+    <div class="card-servicio">
+      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
+      <div class="contenido-card">
+        <h2>Botox</h2>
+        <p>Cabello Esponjado</p>
+        <p><strong>Duración:</strong>3-4 hrs.</p>
+        <p><strong>Precio:</strong> $600 MXN</p>
+      </div>
+      <div class="cta-container">
+        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Botox."
           target="_blank"
           class="btn-reserva">
           Reservar cita
@@ -136,5 +179,28 @@
   <footer class="main-footer">
     <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
   </footer>
+<footer class="main-footer">
+  <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+</footer>
+<script>
+    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
+    .forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+            return;
+        }
+
+        document.querySelectorAll('.submenu').forEach(sub => {
+            sub.style.display = 'none';
+        });
+
+        submenu.style.display = 'block';
+        });
+    });
+    </script>
 </body>
 </html>
