@@ -1,116 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promociones</title>
-  <link rel="stylesheet" href="/static/css/service_promo_styles.css">
-</head>
-<body>
-  <header class = "main-header">
-    <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestras Promociones</h1>
-      <p>Descubre nuestras ofertas especiales</p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promociones</title>
+    <link rel="stylesheet" href="/static/css/service_promo_styles.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="titulo-servicio-container">
+        <h1 class="titulo-servicio">Nuestras Promociones</h1>
+        <p>Descubre nuestras ofertas especiales</p>
+      </div>
     </header>
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
-            <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-            <li class="menu-servicios">
-                    <a href="#servicios">SERVICIOS</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-                        <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
-                        <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-                        <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
-                        <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
-                    </ul>
-                </li>
-                <li class="menu-promociones">
-                    <a href="#promociones">PROMOCIONES</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('index') }}#promociones">Promociones</a></li>
-                        <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
-                    </ul>
-                </li>
-                <li class="menu-contacto">
-              <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
-              <ul class="submenu">
-                <li><a href="https://instagram.com/erimar_studio" target="_blank">Instagram</a></li>
-                <li><a href="https://facebook.com/erimar.studio" target="_blank">Facebook</a></li>
-                <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
-                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
-              </ul>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+        <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
+        <li class="menu-servicios">
+          <a href="#servicios">SERVICIOS</a>
+          <ul class="submenu">
+            <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
+            <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
+            <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
+            <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+          </ul>
+        </li>
+        <li class="menu-promociones">
+          <a href="#promociones">PROMOCIONES</a>
+          <ul class="submenu">
+            <li>
+              <a href="{{ url_for('index') }}#promociones">Promociones</a>
             </li>
-            </ul>
-        <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-            target="_blank"
-            class="btn-reserva">
-            Reservar cita
+            <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+          </ul>
+        </li>
+        <li class="menu-contacto">
+          <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+          <ul class="submenu">
+            <li>
+              <a href="https://instagram.com/erimar_studio" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://facebook.com/erimar.studio" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
+            </li>
+            <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-container">
+        <a
+          href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+          target="_blank"
+          class="btn-reserva"
+        >
+          Reservar cita
         </a>
-        </div>
+      </div>
     </nav>
-  <main>
-  <section class="promociones" id="promociones">
-            <div class="promociones-container">
-                <div class="promo-card">
-                    <h3>Paquete Uñas + Pestañas</h3>
-                    <p>Disfruta de un combo especial para manos y mirada.</p>
-                    <span class="precio">$600 MXN</span>
-                    <div class="cta-container">
-                    <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20uñas%20mas%20pestasñas"
-                       class="btn-promo">
-                        Reservar cita
-                    </a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <h3>Promoción de Bienvenida</h3>
-                    <p>Primera cita con 10% de descuento en cualquier servicio.</p>
-                    <span class="precio">Aplica en tu primera visita</span>
-                    <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20promo%20de%20bienvenida"
-                       class="btn-promo">
-                        Reservar cita
-                    </a>
-                </div>
-                <div class="promo-card">
-                    <h3>Tratamiento Capilar</h3>
-                    <p>Cambia tu estilo de cabello con un 20% de descuento en keratinas.</p>
-                    <span class="precio">De $600 a $480 MXN</span>
-                    <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20promo%20de%20keratina"
-                       class="btn-promo">
-                        Reservar cita
-                    </a>
-                </div>
-                </div>
+    <main>
+      <section class="promociones" id="promociones">
+        <div class="promociones-container">
+          <div class="promo-card">
+            <h3>Paquete Uñas + Pestañas</h3>
+            <p>Disfruta de un combo especial para manos y mirada.</p>
+            <span class="precio">$600 MXN</span>
+            <div class="cta-container">
+              <a
+                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20uñas%20mas%20pestasñas"
+                class="btn-promo"
+              >
+                Reservar cita
+              </a>
             </div>
-    </section>
+          </div>
+          <div class="promo-card">
+            <h3>Promoción de Bienvenida</h3>
+            <p>Primera cita con 10% de descuento en cualquier servicio.</p>
+            <span class="precio">Aplica en tu primera visita</span>
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20promo%20de%20bienvenida"
+              class="btn-promo"
+            >
+              Reservar cita
+            </a>
+          </div>
+          <div class="promo-card">
+            <h3>Tratamiento Capilar</h3>
+            <p>
+              Cambia tu estilo de cabello con un 20% de descuento en keratinas.
+            </p>
+            <span class="precio">De $600 a $480 MXN</span>
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20promo%20de%20keratina"
+              class="btn-promo"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+      document
+        .querySelectorAll(
+          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+        )
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
 
-  </main>
-  <footer class="main-footer">
-    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
-  </footer>
-  <script>
-    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
-    .forEach(link => {
-        link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const submenu = this.nextElementSibling;
+            if (submenu.style.display === "block") {
+              submenu.style.display = "none";
+              return;
+            }
 
-        if (submenu.style.display === 'block') {
-            submenu.style.display = 'none';
-            return;
-        }
+            document.querySelectorAll(".submenu").forEach((sub) => {
+              sub.style.display = "none";
+            });
 
-        document.querySelectorAll('.submenu').forEach(sub => {
-            sub.style.display = 'none';
+            submenu.style.display = "block";
+          });
         });
-
-        submenu.style.display = 'block';
-        });
-    });
     </script>
-</body>
+  </body>
 </html>

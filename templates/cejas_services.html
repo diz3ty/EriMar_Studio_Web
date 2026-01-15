@@ -1,124 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cejas</title>
-  <link rel="stylesheet" href="/static/css/service_promo_styles.css">
-</head>
-<body>
-  <header class = "main-header">
-    <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios de Cejas</h1>
-      <p>Como quieres resaltar la belleza de tus cejas?</p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cejas</title>
+    <link rel="stylesheet" href="/static/css/service_promo_styles.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="titulo-servicio-container">
+        <h1 class="titulo-servicio">Nuestros Servicios de Cejas</h1>
+        <p>Como quieres resaltar la belleza de tus cejas?</p>
+      </div>
     </header>
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
-            <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-            <li class="menu-servicios">
-                    <a href="#servicios">SERVICIOS</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-                        <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
-                        <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-                        <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
-                        <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
-                    </ul>
-                </li>
-                <li class="menu-promociones">
-                    <a href="#promociones">PROMOCIONES</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('index') }}#promociones">Promociones</a></li>
-                        <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
-                    </ul>
-                </li>
-                <li class="menu-contacto">
-              <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
-              <ul class="submenu">
-                <li><a href="https://instagram.com/erimar_studio" target="_blank">Instagram</a></li>
-                <li><a href="https://facebook.com/erimar.studio" target="_blank">Facebook</a></li>
-                <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
-                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
-              </ul>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+        <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
+        <li class="menu-servicios">
+          <a href="#servicios">SERVICIOS</a>
+          <ul class="submenu">
+            <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
+            <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
+            <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
+            <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+          </ul>
+        </li>
+        <li class="menu-promociones">
+          <a href="#promociones">PROMOCIONES</a>
+          <ul class="submenu">
+            <li>
+              <a href="{{ url_for('index') }}#promociones">Promociones</a>
             </li>
-            </ul>
-        <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-            target="_blank"
-            class="btn-reserva">
-            Reservar cita
+            <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+          </ul>
+        </li>
+        <li class="menu-contacto">
+          <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+          <ul class="submenu">
+            <li>
+              <a href="https://instagram.com/erimar_studio" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://facebook.com/erimar.studio" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
+            </li>
+            <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-container">
+        <a
+          href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+          target="_blank"
+          class="btn-reserva"
+        >
+          Reservar cita
         </a>
-        </div>
+      </div>
     </nav>
-  <main>
-  <section class="servicios-cards">
-    <div class="card-servicio">
-      <img src="/static/images/Laminado_ceja_1.jpeg" alt="Servicio de cejas">
-      <div class="contenido-card">
-        <h2>Laminado de cejas Basico</h2>
-        <p>Limpieza, Laminado</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $300 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Basico."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Laminado_ceja_2.jpeg" alt="Servicio de cejas">
-      <div class="contenido-card">
-        <h2>Laminado de cejas Lux</h2>
-        <p>Limpieza, Exfoliacion, Laminado</p>
-        <p><strong>Duración:</strong> 30 minutos</p>
-        <p><strong>Precio:</strong> $350 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Lux."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="consejos_consideraciones">
-    <h2>Consejos y Consideraciones</h2>
-    <ul>
-      <li>Evita mojar tus cejas durante las primeras 24 horas después del tratamiento.</li>
-      <li>No apliques maquillaje en las cejas durante al menos 48 horas.</li>
-      <li>Evita la exposición directa al sol y el uso de saunas o piscinas durante los primeros días.</li>
-      <li>Usa productos recomendados por tu especialista para mantener el cuidado de tus cejas.</li>
-    </ul>
-  </section>
-  </main>
-  <footer class="main-footer">
-    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
-  </footer>
-<script>
-    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
-    .forEach(link => {
-        link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const submenu = this.nextElementSibling;
+    <main>
+      <section class="servicios-cards">
+        <div class="card-servicio">
+          <img
+            src="/static/images/Laminado_ceja_1.jpeg"
+            alt="Servicio de cejas"
+          />
+          <div class="contenido-card">
+            <h2>Laminado de cejas Basico</h2>
+            <p>Limpieza, Laminado</p>
+            <p><strong>Duración:</strong> 30 minutos</p>
+            <p><strong>Precio:</strong> $300 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Basico."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img
+            src="/static/images/Laminado_ceja_2.jpeg"
+            alt="Servicio de cejas"
+          />
+          <div class="contenido-card">
+            <h2>Laminado de cejas Lux</h2>
+            <p>Limpieza, Exfoliacion, Laminado</p>
+            <p><strong>Duración:</strong> 30 minutos</p>
+            <p><strong>Precio:</strong> $350 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Lux."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="consejos_consideraciones">
+        <h2>Consejos y Consideraciones</h2>
+        <ul>
+          <li>
+            Evita mojar tus cejas durante las primeras 24 horas después del
+            tratamiento.
+          </li>
+          <li>
+            No apliques maquillaje en las cejas durante al menos 48 horas.
+          </li>
+          <li>
+            Evita la exposición directa al sol y el uso de saunas o piscinas
+            durante los primeros días.
+          </li>
+          <li>
+            Usa productos recomendados por tu especialista para mantener el
+            cuidado de tus cejas.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+      document
+        .querySelectorAll(
+          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+        )
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
 
-        if (submenu.style.display === 'block') {
-            submenu.style.display = 'none';
-            return;
-        }
+            if (submenu.style.display === "block") {
+              submenu.style.display = "none";
+              return;
+            }
 
-        document.querySelectorAll('.submenu').forEach(sub => {
-            sub.style.display = 'none';
+            document.querySelectorAll(".submenu").forEach((sub) => {
+              sub.style.display = "none";
+            });
+
+            submenu.style.display = "block";
+          });
         });
-
-        submenu.style.display = 'block';
-        });
-    });
     </script>
-</body>
+  </body>
 </html>

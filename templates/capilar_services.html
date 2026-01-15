@@ -1,204 +1,251 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capilares</title>
-  <link rel="stylesheet" href="/static/css/service_promo_styles.css">
-</head>
-<body>
-  <header class = "main-header">
-    <div class="titulo-servicio-container">
-      <h1 class="titulo-servicio">Nuestros Servicios Capilares</h1>
-      <p>Como quieres dar luz a tu cabello?</p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capilares</title>
+    <link rel="stylesheet" href="/static/css/service_promo_styles.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="titulo-servicio-container">
+        <h1 class="titulo-servicio">Nuestros Servicios Capilares</h1>
+        <p>Como quieres dar luz a tu cabello?</p>
+      </div>
     </header>
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
-            <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-            <li class="menu-servicios">
-                    <a href="#servicios">SERVICIOS</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-                        <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
-                        <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-                        <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
-                        <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
-                    </ul>
-                </li>
-                <li class="menu-promociones">
-                    <a href="#promociones">PROMOCIONES</a>
-                    <ul class="submenu">
-                        <li><a href="{{ url_for('index') }}#promociones">Promociones</a></li>
-                        <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
-                    </ul>
-                </li>
-                <li class="menu-contacto">
-              <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
-              <ul class="submenu">
-                <li><a href="https://instagram.com/erimar_studio" target="_blank">Instagram</a></li>
-                <li><a href="https://facebook.com/erimar.studio" target="_blank">Facebook</a></li>
-                <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
-                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
-              </ul>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+        <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
+        <li class="menu-servicios">
+          <a href="#servicios">SERVICIOS</a>
+          <ul class="submenu">
+            <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
+            <li><a href="{{ url_for('servicio_pestañas') }}">Pestañas</a></li>
+            <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
+            <li><a href="{{ url_for('servicio_cejas') }}">Cejas</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+          </ul>
+        </li>
+        <li class="menu-promociones">
+          <a href="#promociones">PROMOCIONES</a>
+          <ul class="submenu">
+            <li>
+              <a href="{{ url_for('index') }}#promociones">Promociones</a>
             </li>
-            </ul>
-        <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-            target="_blank"
-            class="btn-reserva">
-            Reservar cita
+            <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+          </ul>
+        </li>
+        <li class="menu-contacto">
+          <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+          <ul class="submenu">
+            <li>
+              <a href="https://instagram.com/erimar_studio" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://facebook.com/erimar.studio" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
+            </li>
+            <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cta-container">
+        <a
+          href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+          target="_blank"
+          class="btn-reserva"
+        >
+          Reservar cita
         </a>
-        </div>
+      </div>
     </nav>
-  <main>
-  <section class="servicios-cards">
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilars">
-      <div class="contenido-card">
-        <h2>Tratamiento Capilar</h2>
-        <p>Limpieza + Tratamiento</p>
-        <p><strong>Duración:</strong> 60 minutos</p>
-        <p><strong>Precio:</strong> $300 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Tratamiento%20Capilar."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
-      <div class="contenido-card">
-        <h2>Nano</h2>
-        <p>Cabello delicado</p>
-        <p><strong>Duración:</strong>3-4 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Nano."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
-      <div class="contenido-card">
-        <h2>Japonesa</h2>
-        <p>Cabello grueso</p>
-        <p><strong>Duración:</strong>3-4 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Japonesa."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar">
-      <div class="contenido-card">
-        <h2>Brasileña</h2>
-        <p>Cabello rizado</p>
-        <p><strong>Duración:</strong> 3-45 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Brasileña."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-      <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Células</h2>
-        <p>Cabello decolorado</p>
-        <p><strong>Duración:</strong>3-4 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Células."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Colágeno</h2>
-        <p>Cabello Reseco</p>
-        <p><strong>Duración:</strong>3-4 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Colágeno."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-    <div class="card-servicio">
-      <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas">
-      <div class="contenido-card">
-        <h2>Botox</h2>
-        <p>Cabello Esponjado</p>
-        <p><strong>Duración:</strong>3-4 hrs.</p>
-        <p><strong>Precio:</strong> $600 MXN</p>
-      </div>
-      <div class="cta-container">
-        <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Botox."
-          target="_blank"
-          class="btn-reserva">
-          Reservar cita
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="consejos_consideraciones">
-    <h2>Consejos y Consideraciones</h2>
-    <ul>
-      <li>Consulta previa: Siempre es recomendable tener una consulta con nuestro estilista antes de cualquier tratamiento capilar para evaluar la salud de tu cabello y cuero cabelludo.</li>
-      <li>Cuidado posterior: Sigue las recomendaciones de cuidado posterior proporcionadas por nuestro equipo para mantener los resultados del tratamiento.</li>
-      <li>Frecuencia: Algunos tratamientos capilares requieren mantenimiento regular. Consulta con nuestro estilista sobre la frecuencia adecuada para tu tipo de cabello.</li>
-      <li>Alergias: Informa a nuestro equipo sobre cualquier alergia o sensibilidad que puedas tener a ciertos productos antes de iniciar el tratamiento.</li>
-    </ul>
-  </section>
-  </main>
-  <footer class="main-footer">
-    <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
-  </footer>
-<script>
-    document.querySelectorAll('.menu-servicios > a, .menu-promociones > a, .menu-contacto > a')
-    .forEach(link => {
-        link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const submenu = this.nextElementSibling;
+    <main>
+      <section class="servicios-cards">
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilars" />
+          <div class="contenido-card">
+            <h2>Tratamiento Capilar</h2>
+            <p>Limpieza + Tratamiento</p>
+            <p><strong>Duración:</strong> 60 minutos</p>
+            <p><strong>Precio:</strong> $300 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Tratamiento%20Capilar."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar" />
+          <div class="contenido-card">
+            <h2>Nano</h2>
+            <p>Cabello delicado</p>
+            <p><strong>Duración:</strong>3-4 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Nano."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar" />
+          <div class="contenido-card">
+            <h2>Japonesa</h2>
+            <p>Cabello grueso</p>
+            <p><strong>Duración:</strong>3-4 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Japonesa."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio capilar" />
+          <div class="contenido-card">
+            <h2>Brasileña</h2>
+            <p>Cabello rizado</p>
+            <p><strong>Duración:</strong> 3-45 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Brasileña."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas" />
+          <div class="contenido-card">
+            <h2>Células</h2>
+            <p>Cabello decolorado</p>
+            <p><strong>Duración:</strong>3-4 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Células."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas" />
+          <div class="contenido-card">
+            <h2>Colágeno</h2>
+            <p>Cabello Reseco</p>
+            <p><strong>Duración:</strong>3-4 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Colágeno."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+        <div class="card-servicio">
+          <img src="/static/images/Keratina_New.jpeg" alt="Servicio de uñas" />
+          <div class="contenido-card">
+            <h2>Botox</h2>
+            <p>Cabello Esponjado</p>
+            <p><strong>Duración:</strong>3-4 hrs.</p>
+            <p><strong>Precio:</strong> $600 MXN</p>
+          </div>
+          <div class="cta-container">
+            <a
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Botox."
+              target="_blank"
+              class="btn-reserva"
+            >
+              Reservar cita
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="consejos_consideraciones">
+        <h2>Consejos y Consideraciones</h2>
+        <ul>
+          <li>
+            Consulta previa: Siempre es recomendable tener una consulta con
+            nuestro estilista antes de cualquier tratamiento capilar para
+            evaluar la salud de tu cabello y cuero cabelludo.
+          </li>
+          <li>
+            Cuidado posterior: Sigue las recomendaciones de cuidado posterior
+            proporcionadas por nuestro equipo para mantener los resultados del
+            tratamiento.
+          </li>
+          <li>
+            Frecuencia: Algunos tratamientos capilares requieren mantenimiento
+            regular. Consulta con nuestro estilista sobre la frecuencia adecuada
+            para tu tipo de cabello.
+          </li>
+          <li>
+            Alergias: Informa a nuestro equipo sobre cualquier alergia o
+            sensibilidad que puedas tener a ciertos productos antes de iniciar
+            el tratamiento.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+      document
+        .querySelectorAll(
+          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+        )
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
 
-        if (submenu.style.display === 'block') {
-            submenu.style.display = 'none';
-            return;
-        }
+            if (submenu.style.display === "block") {
+              submenu.style.display = "none";
+              return;
+            }
 
-        document.querySelectorAll('.submenu').forEach(sub => {
-            sub.style.display = 'none';
+            document.querySelectorAll(".submenu").forEach((sub) => {
+              sub.style.display = "none";
+            });
+
+            submenu.style.display = "block";
+          });
         });
-
-        submenu.style.display = 'block';
-        });
-    });
     </script>
-</body>
+  </body>
 </html>

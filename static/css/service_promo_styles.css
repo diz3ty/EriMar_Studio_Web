@@ -4,7 +4,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
   width: 100%;
 }
@@ -20,7 +20,7 @@ main {
 
 /* Header */
 .main-header {
-  background-image: url('/static/images/EriMar.jpg'); /* fondo elegante */
+  background-image: url("/static/images/EriMar.jpg"); /* fondo elegante */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -177,45 +177,6 @@ main {
   font-size: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* mantiene menú y botón en línea */
-    justify-content: center;
-    gap: 0.3rem;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    font-size: 0.8rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-reserva {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    margin-left: 1rem;
-  }
-
-  .titulo-servicio {
-    font-size: 2rem;
-  }
-
-  .titulo-servicio-container p {
-    font-size: 1rem;
-  }
-
-  .servicio-detalle img {
-    max-width: 90%;
-  }
-
-  .servicio-detalle ul {
-    text-align: center;
-  }
-}
-
 /* cartas de servicios */
 .servicios-cards {
   display: grid;
@@ -272,34 +233,12 @@ main {
   margin-bottom: 0.5rem;
 }
 
-@media (  max-width: 768px){
-  .servicios-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card-servicio {
-    width: 90%;
-  }
-  .card-servicio:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  }
-}
-
 /* consejos y consideraciones */
 .consejos_consideraciones {
   border-radius: 12px;
   padding: 2rem;
   max-width: 800px;
   margin: 2rem auto;
-}
-
-@media (max-width: 768px) {
-  .consejos_consideraciones {
-    padding: 1rem;
-    margin: 1rem;
-    text-size-adjust: auto;
-  }
 }
 
 .menu-servicios {
@@ -455,7 +394,7 @@ main {
 
 .promo-card {
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   max-width: 300px;
   flex: 1;
@@ -520,8 +459,60 @@ main {
   background-color: #ffb2fb;
 }
 
-
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* mantiene menú y botón en línea */
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    font-size: 0.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-reserva {
+    font-size: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .titulo-servicio {
+    font-size: 2rem;
+  }
+
+  .titulo-servicio-container p {
+    font-size: 1rem;
+  }
+
+  .servicio-detalle img {
+    max-width: 90%;
+  }
+
+  .servicio-detalle ul {
+    text-align: center;
+  }
+  .servicios-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-servicio {
+    width: 90%;
+  }
+  .card-servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  .consejos_consideraciones {
+    padding: 1rem;
+    margin: 1rem;
+    text-size-adjust: auto;
+  }
+
   .promociones-container {
     flex-direction: column;
     align-items: center;
