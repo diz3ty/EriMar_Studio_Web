@@ -477,7 +477,8 @@ main {
   .btn-reserva {
     font-size: 0.7rem;
     padding: 0.4rem 0.8rem;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
+    margin-top: 0.3rem;
   }
 
   .titulo-servicio {
@@ -497,19 +498,20 @@ main {
   }
 
   .servicios-cards {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
+    gap: 0.3rem;
+    padding: 0.3rem;
   }
 
   .card-servicio {
-    width: 50%;
+    width: 40%;
     max-width: 180px;
+    max-height: 450px;
     margin: 0 auto;
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.3rem;
+    font-size: 0.7rem;
   }
 
   .card-servicio img {
@@ -518,11 +520,11 @@ main {
   }
 
   .contenido-card h2 {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .contenido-card p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .card-servicio:hover {
