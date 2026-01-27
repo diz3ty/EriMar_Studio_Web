@@ -426,7 +426,7 @@ main {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    display: flex;
     align-items: center;
     gap: 1rem;
     height: auto;
@@ -434,7 +434,6 @@ main {
   }
 
   .nav-links {
-    flex-direction: column;
     gap: 1rem;
     text-align: center;
   }

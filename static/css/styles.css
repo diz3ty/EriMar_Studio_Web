@@ -28,13 +28,15 @@ main {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
-  width: 100%;
-  gap: 1rem;
-  margin-top: 3rem;
+  overflow-x: auto;
   padding: 0 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .logo-centered {
@@ -500,7 +502,7 @@ main {
 @media (max-width: 768px) {
 
   .navbar {
-    flex-direction: column;
+    display: flex;
     align-items: center;
     gap: 1rem;
     height: auto;
@@ -508,7 +510,6 @@ main {
   }
 
   .nav-links {
-    flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
