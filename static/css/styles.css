@@ -28,15 +28,12 @@ main {
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 0 1rem;
-  gap: 1rem;
-  box-sizing: border-box;
   width: 100%;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .logo-centered {
@@ -503,15 +500,22 @@ main {
 
   .navbar {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     gap: 1rem;
-    height: auto;
-    padding: 1rem 0;
+    padding: 0 1rem;
   }
 
   .nav-links {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
-    text-align: center;
+    font-size: 0.85rem;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
   }
 
   .cta-container {
@@ -519,13 +523,11 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 0 1rem;
   }
 
   .btn-reserva {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
-    width: auto;
   }
 
   .iconos-redes {
@@ -619,6 +621,7 @@ main {
 
   .promo-card {
     max-width: 100%;
+    text-align: center;
   }
 
   .promo-card img {
@@ -635,7 +638,7 @@ main {
     font-size: 1rem;
     padding: 10px 16px;
     display: block;
-    margin: 12px auto;
+    margin: 1rem auto 0 auto;
     text-align: center;
   }
 
