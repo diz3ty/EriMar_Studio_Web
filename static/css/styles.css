@@ -22,8 +22,8 @@ main {
 .main-header {
   border-bottom: 2px solid #ffd1f2;
   width: 100%;
-  height: 200px;
   text-align: center;
+  padding: 1rem 0;
 }
 
 .navbar {
@@ -32,21 +32,33 @@ main {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .logo-centered {
-  flex: 1;
-  max-height: 300px;
+  flex: 0 0 auto;
+  max-height: 100px;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .nav-links {
-  flex: 13;
+  flex: 1;
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 7rem;
   list-style: none;
   margin: 0;
+  padding: 0;
   font-weight: bold;
+}
+
+.nav-links li {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -78,38 +90,10 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    height: 300px;
-  }
-
-  .nav-links {
-    flex: 10;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .cta-container {
-    margin-top: 1rem;
-    justify-content: center;
-  }
-
-  .btn-reserva {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
 /* inicio section */
 .inicio {
   width: 100%;
-  background-image: url("/static/images/EriMar.jpg");
+  background-image: url("/static/images/Portada.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -135,20 +119,6 @@ main {
 .inicio p {
   font-size: 1.5rem;
   color: #ffedfa;
-}
-
-@media (max-width: 768px) {
-  .inicio {
-    padding: 2rem 1rem;
-  }
-
-  .inicio h1 {
-    font-size: 1.2;
-  }
-
-  .inicio p {
-    font-size: 0.5rem;
-  }
 }
 
 /* Nosotros section */
@@ -200,21 +170,6 @@ main {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .nosotros-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nosotros-texto {
-    text-align: center;
-  }
-
-  .nosotros-imagen {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-}
 
 /* servicios section */
 .servicios {
@@ -278,29 +233,74 @@ main {
   transform: translateY(-5px);
 }
 
-@media (max-width: 768px) {
-  .servicios-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
+.menu-servicios {
+  position: relative;
+}
 
-  .servicio {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffe6f8;
+  border: 1px solid #ffd1f2;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: none;
+  z-index: 1000;
+  min-width: 160px;
+}
 
-  .servicio img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 250px;
-  }
+.submenu li a {
+  color: #6c2a6a;
+  text-decoration: none;
+  display: block;
+}
 
-  .servicio h3 {
-    text-align: center;
-  }
+.submenu li a:hover {
+  background-color: #fac8e9;
+  border-radius: 4px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-servicios:hover .submenu {
+  display: block;
+}
+
+.menu-servicios:focus-within .submenu {
+  display: block;
+}
+
+.menu-promociones {
+  position: relative;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-promociones:hover .submenu {
+  display: block;
+}
+
+/* Para móvil: abrir al tocar */
+.menu-promociones:focus-within .submenu {
+  display: block;
+}
+
+.menu-contacto {
+  position: relative;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-contacto:hover .submenu {
+  display: block;
+}
+
+/* Para móvil: abrir al tocar */
+.menu-contacto:focus-within .submenu {
+  display: block;
 }
 
 /* Promo section */
@@ -328,11 +328,28 @@ main {
 
 .promo-card {
   border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   max-width: 300px;
-  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .promo-card:hover {
@@ -393,17 +410,6 @@ main {
   background-color: #ffb2fb;
 }
 
-@media (max-width: 768px) {
-  .promociones-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .promo-card {
-    max-width: 100%;
-  }
-}
-
 /* ubication section */
 .ubicacion {
   background-color: #ffedfa;
@@ -438,19 +444,6 @@ main {
 
 .ubicacion-mapa {
   flex: 2;
-}
-
-@media (max-width: 768px) {
-  .ubicacion-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .ubicacion-mapa {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
 }
 
 /*contact section */
@@ -502,150 +495,207 @@ main {
 }
 
 @media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .cta-container {
+    margin-top: 1rem;
+  }
+
+  .btn-reserva {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
   .iconos-redes {
     flex-direction: column;
     gap: 1.5rem;
   }
-}
 
-/* Footer Styles */
-footer {
-  background-color: #ffedfa;
-  padding: 1.5rem;
-  text-align: center;
-  color: #6c2a6a;
-  border-top: 2px solid #ffd1f2;
-}
+  /* Footer Styles */
+  footer {
+    background-color: #ffedfa;
+    padding: 1.5rem;
+    text-align: center;
+    color: #6c2a6a;
+    border-top: 2px solid #ffd1f2;
+  }
 
-footer p {
-  margin: 0;
-  font-size: 1rem;
-}
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
 
-.menu-servicios {
-  position: relative;
-}
+  .menu-servicios {
+    position: relative;
+  }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffe6f8;
-  border: 1px solid #ffd1f2;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  min-width: 160px;
-}
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffe6f8;
+    border: 1px solid #ffd1f2;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 1000;
+    min-width: 160px;
+  }
 
-.submenu li {
-  padding: 0.5rem 1rem;
-}
+  .submenu li {
+    padding: 0.5rem 1rem;
+  }
 
-.submenu li a {
-  color: #6c2a6a;
-  text-decoration: none;
-  display: block;
-}
+  .submenu li a {
+    color: #6c2a6a;
+    text-decoration: none;
+    display: block;
+  }
 
-.submenu li a:hover {
-  background-color: #fac8e9;
-  border-radius: 4px;
-}
+  .submenu li a:hover {
+    background-color: #fac8e9;
+    border-radius: 4px;
+  }
 
-/* Mostrar submenú al pasar el mouse */
-.menu-servicios:hover .submenu {
-  display: block;
-}
+  /* Mostrar submenú al pasar el mouse */
+  .menu-servicios:hover .submenu {
+    display: block;
+  }
 
-.menu-servicios:focus-within .submenu {
-  display: block;
-}
+  .menu-servicios:focus-within .submenu {
+    display: block;
+  }
 
-.menu-promociones {
-  position: relative;
-}
+  .menu-promociones {
+    position: relative;
+  }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffe6f8;
-  border: 1px solid #ffd1f2;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  min-width: 160px;
-}
+  /* Mostrar submenú al pasar el mouse */
+  .menu-promociones:hover .submenu {
+    display: block;
+  }
 
-.submenu li {
-  padding: 0.5rem 1rem;
-}
+  /* Para móvil: abrir al tocar */
+  .menu-promociones:focus-within .submenu {
+    display: block;
+  }
 
-.submenu li a {
-  color: #6c2a6a;
-  text-decoration: none;
-  display: block;
-}
+  .menu-contacto {
+    position: relative;
+  }
 
-.submenu li a:hover {
-  background-color: #fac8e9;
-  border-radius: 4px;
-}
+  /* Mostrar submenú al pasar el mouse */
+  .menu-contacto:hover .submenu {
+    display: block;
+  }
 
-/* Mostrar submenú al pasar el mouse */
-.menu-promociones:hover .submenu {
-  display: block;
-}
+  /* Para móvil: abrir al tocar */
+  .menu-contacto:focus-within .submenu {
+    display: block;
+  }
 
-/* Para móvil: abrir al tocar */
-.menu-promociones:focus-within .submenu {
-  display: block;
-}
+  .promo-card {
+    max-width: 100%;
+  }
 
-.menu-contacto {
-  position: relative;
-}
+  .promo-card img {
+    max-width: 90%;
+    border-radius: 6px;
+  }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffe6f8;
-  border: 1px solid #ffd1f2;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  min-width: 160px;
-}
+  .promo-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 
-.submenu li {
-  padding: 0.5rem 1rem;
-}
+  .btn-promo {
+    font-size: 1rem;
+    padding: 10px 16px;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+  }
 
-.submenu li a {
-  color: #6c2a6a;
-  text-decoration: none;
-  display: block;
-}
+  .inicio {
+    padding: 2rem 1rem;
+  }
 
-.submenu li a:hover {
-  background-color: #fac8e9;
-  border-radius: 4px;
-}
+  .inicio h1 {
+    font-size: 1.2;
+  }
 
-/* Mostrar submenú al pasar el mouse */
-.menu-contacto:hover .submenu {
-  display: block;
-}
+  .inicio p {
+    font-size: 0.5rem;
+  }
 
-/* Para móvil: abrir al tocar */
-.menu-contacto:focus-within .submenu {
-  display: block;
+  .nosotros-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-texto {
+    text-align: center;
+  }
+
+  .nosotros-imagen {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .servicios-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .servicio {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .servicio img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .servicio h3 {
+    text-align: center;
+  }
+
+  .promociones-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-card {
+    max-width: 100%;
+  }
+
+  .ubicacion-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ubicacion-mapa {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
 }

@@ -9,7 +9,7 @@ body {
   width: 100%;
 }
 
-/* main Styles */
+/* Main Styles */
 main {
   display: flex;
   flex-direction: column;
@@ -18,9 +18,9 @@ main {
   padding: 1rem;
 }
 
-/* Header */
+/* Header  Styles */
 .main-header {
-  background-image: url("/static/images/EriMar.jpg"); /* fondo elegante */
+  background-image: url("/static/images/Portada.jpg"); /* fondo elegante */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,20 +34,23 @@ main {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* permite que se ajuste si no cabe */
+  flex-wrap: wrap;
   width: 100%;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .nav-links {
+  flex: 1;
   display: flex;
   justify-content: center;
   gap: 7rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .nav-links li {
@@ -57,7 +60,10 @@ main {
 }
 
 .nav-links li a {
+  text-decoration: none;
   color: #6c2a6a;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -259,10 +265,6 @@ main {
   min-width: 160px;
 }
 
-.submenu li {
-  padding: 0.5rem 1rem;
-}
-
 .submenu li a {
   color: #6c2a6a;
   text-decoration: none;
@@ -287,35 +289,6 @@ main {
   position: relative;
 }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffe6f8;
-  border: 1px solid #ffd1f2;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  min-width: 160px;
-}
-
-.submenu li {
-  padding: 0.5rem 1rem;
-}
-
-.submenu li a {
-  color: #6c2a6a;
-  text-decoration: none;
-  display: block;
-}
-
-.submenu li a:hover {
-  background-color: #fac8e9;
-  border-radius: 4px;
-}
-
 /* Mostrar submenú al pasar el mouse */
 .menu-promociones:hover .submenu {
   display: block;
@@ -330,33 +303,8 @@ main {
   position: relative;
 }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffe6f8;
-  border: 1px solid #ffd1f2;
-  border-radius: 8px;
-  padding: 0.5rem 0;
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  min-width: 160px;
-}
-
 .submenu li {
   padding: 0.5rem 1rem;
-}
-
-.submenu li a {
-  color: #6c2a6a;
-  text-decoration: none;
-  display: block;
-}
-
-.submenu li a:hover {
-  background-color: #fac8e9;
-  border-radius: 4px;
 }
 
 /* Mostrar submenú al pasar el mouse */
@@ -394,15 +342,28 @@ main {
 
 .promo-card {
   border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   max-width: 300px;
-  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease;
 }
 
 .promo-card:hover {
   transform: translateY(-5px);
+}
+
+.promo-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .promo-card h3 {
@@ -545,5 +506,23 @@ main {
 
   .promo-card {
     max-width: 100%;
+  }
+
+  .promo-card img {
+    max-width: 90%;
+    border-radius: 6px;
+  }
+
+  .promo-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .btn-promo {
+    font-size: 1rem;
+    padding: 10px 16px;
+    display: block;
+    margin: 12px auto;
+    text-align: center;
   }
 }
