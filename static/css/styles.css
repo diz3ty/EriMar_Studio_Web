@@ -30,10 +30,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
   gap: 1rem;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .logo-centered {
@@ -45,14 +46,14 @@ main {
 }
 
 .nav-links {
-  flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 7rem;
+  gap: 5rem;
   list-style: none;
   margin: 0;
   padding: 0;
   font-weight: bold;
+  flex: 1;
+  flex-wrap: nowrap;
 }
 
 .nav-links li {
@@ -73,8 +74,10 @@ main {
 }
 
 .cta-container {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
+  margin-left: auto;
 }
 
 .btn-reserva {
@@ -499,6 +502,7 @@ main {
   .navbar {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     height: auto;
     padding: 1rem 0;
   }
@@ -511,11 +515,16 @@ main {
 
   .cta-container {
     margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
   }
 
   .btn-reserva {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+    width: auto;
   }
 
   .iconos-redes {
