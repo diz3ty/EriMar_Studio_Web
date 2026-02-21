@@ -90,6 +90,7 @@ main {
   font-weight: bold;
   flex: 1;
   flex-wrap: nowrap;
+  margin-right: 1rem;
 }
 
 /* navigation links - list items */
