@@ -5,12 +5,12 @@
     <title>EriMar Studio</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
+      href="{{ url_for('static', filename='css/index_styles.css') }}"
     />
   </head>
   <body>
     <header class="main-header">
-      <div class="logo-centered">
+      <div class="logo">
         <img
           src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
           alt="EriMar Studio"
@@ -23,28 +23,28 @@
       </div>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="#inicio">INICIO</a></li>
-          <li><a href="#nosotros">NOSOTROS</a></li>
-          <li class="menu-servicios">
-            <a href="#servicios">SERVICIOS</a>
+          <li><a href="#start">INICIO</a></li>
+          <li><a href="#weare">NOSOTROS</a></li>
+          <li class="menu-services">
+            <a href="#services">SERVICIOS</a>
             <ul class="submenu">
-              <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-              <li><a href="{{ url_for('servicio_pestañas') }}">Cejas y Pestañas</a></li>
-              <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-              <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+              <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">Cejas y Pestañas</a></li>
+              <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
+              <li><a href="{{ url_for('index') }}#services">Ver todos</a></li>
             </ul>
           </li>
-          <li class="menu-promociones">
-            <a href="#promociones">PROMOCIONES</a>
+          <li class="menu-promos">
+            <a href="#promos">PROMOCIONES</a>
             <ul class="submenu">
               <li>
-                <a href="{{ url_for('index') }}#promociones">Promociones</a>
+                <a href="{{ url_for('index') }}#promos">Promociones</a>
               </li>
-              <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+              <li><a href="{{ url_for('promos') }}">Ver todas</a></li>
             </ul>
           </li>
-          <li class="menu-contacto">
-            <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+          <li class="menu-contact">
+            <a href="{{ url_for('index') }}#contact">CONTACTO</a>
             <ul class="submenu">
               <li>
                 <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
@@ -61,7 +61,7 @@
                   >WhatsApp</a
                 >
               </li>
-              <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+              <li><a href="{{ url_for('index') }}#contact">Contacto</a></li>
             </ul>
           </li>
         </ul>
@@ -76,15 +76,15 @@
       </nav>
     </header>
     <main>
-      <section class="inicio" id="inicio">
-        <div class="inicio-overlay">
+      <section class="start" id="start">
+        <div class="start-overlay">
           <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
           <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
         </div>
       </section>
-      <section class="nosotros" id="nosotros">
-        <div class="nosotros-container">
-          <div class="nosotros-texto">
+      <section class="weare" id="weare">
+        <div class="weare-container">
+          <div class="weare-text">
             <h2>NOSOTROS</h2>
             <p>
               En <strong>EriMar Studio</strong> nos enfocamos en consentirte y
@@ -98,37 +98,37 @@
               relajación y crezca tu confianza.
             </p>
           </div>
-          <div class="nosotros-imagen">
+          <div class="weare-image">
             <img src="/static/images/EriMar.jpg" alt="Nuestro estudio" />
           </div>
         </div>
       </section>
-      <section class="servicios" id="servicios">
+      <section class="services" id="services">
         <h2>NUESTROS SERVICIOS</h2>
-        <div class="servicios-container">
-          <a href="{{ url_for('servicio_uñas') }}" class="servicio-link">
-            <div class="servicio">
+        <div class="services-container">
+          <a href="{{ url_for('service_nails') }}" class="service-link">
+            <div class="service">
               <img src="/static/images/Uñas.jpeg" alt="Uñas" />
               <h3>UÑAS</h3>
             </div>
           </a>
-          <a href="{{ url_for('servicio_pestañas') }}" class="servicio-link">
-            <div class="servicio">
+          <a href="{{ url_for('service_lashes') }}" class="service-link">
+            <div class="service">
               <img src="/static/images/Pestañas.jpeg" alt="Pestañas" />
               <h3>CEJAS Y PESTAÑAS</h3>
             </div>
           </a>
-          <a href="{{ url_for('servicio_capilares') }}" class="servicio-link">
-            <div class="servicio">
+          <a href="{{ url_for('service_capilar') }}" class="service-link">
+            <div class="service">
               <img src="/static/images/Capilares.jpeg" alt="Capilares" />
               <h3>CAPILARES</h3>
             </div>
           </a>
         </div>
       </section>
-      <section class="promociones" id="promociones">
+      <section class="promos" id="promos">
         <h2>PROMOCIONES DL MES</h2>
-        <div class="promociones-container">
+        <div class="promos-container">
           <div class="promo-card">
             <h3>Paquete Mirada Perfecta</h3>
             <img src="/static/images/Paquete_mirada_perfecta.jpeg" alt="Paquete_mirada_perfecta"/>
@@ -162,16 +162,16 @@
             </a>
           </div>
         </div>
-        <div class="vermas-promos-container">
-          <a href="{{ url_for('promociones') }}" class="promos-link">
+        <div class="more-promos-container">
+          <a href="{{ url_for('promos') }}" class="promos-link">
             Ver todas
           </a>
         </div>
       </section>
-      <section class="ubicacion" id="ubicacion">
+      <section class="location" id="location">
         <h2>ENCUENTRANOS EN:</h2>
-        <div class="ubicacion-container">
-          <div class="ubicacion-texto">
+        <div class="location-container">
+          <div class="location-text">
             <p>
               <strong
                 >Av. Pablo Cabrera, Col Centro, San Juan del Río, Qro,
@@ -179,13 +179,13 @@
               >
             </p>
             <p>Visítanos y vive la experiencia en EriMar Studio.</p>
-            <a href="https://maps.app.goo.gl/MZTjKYDnnuxyWogG8" class="btn-mapa"
+            <a href="https://maps.app.goo.gl/MZTjKYDnnuxyWogG8" class="btn-map"
               >📍 Ver en Google Maps</a
             >
           </div>
         </div>
       </section>
-      <section class="contacto" id="contacto">
+      <section class="contact" id="contact">
         <h2>CONTACTANOS Y SIGUENOS EN REDES SOCIALES</h2>
         <p>Visitanos, regalanos tu like y comparte tu experiencia.</p>
         <div class="iconos-redes">
@@ -234,7 +234,7 @@
     <script>
       document
         .querySelectorAll(
-          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+          ".menu-services > a, .menu-promos > a, .menu-contact > a"
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {

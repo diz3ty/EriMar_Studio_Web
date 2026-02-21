@@ -10,25 +10,21 @@ def home():
 def index():
     return render_template('index.html')
 
-@app.route('/servicio/uñas')
-def servicio_uñas():
+@app.route('/service/nails')
+def service_nails():
     return render_template('nails_services.html')
 
-@app.route('/servicio/pestañas')
-def servicio_pestañas():
+@app.route('/service/lashes')
+def service_lashes():
     return render_template('lashes_services.html')
 
-@app.route('/servicio/capilares')
-def servicio_capilares():
+@app.route('/service/capilar')
+def service_capilar():
     return render_template('capilar_services.html')
 
-@app.route('/servicio/cejas')
-def servicio_cejas():
-    return render_template('cejas_services.html')
-
-@app.route('/promociones')
-def promociones():
-    return render_template('promociones.html')
+@app.route('/promos')
+def promos():
+    return render_template('promos.html')
 
 #if __name__ == "__main__":
 #    app.run(debug=True)

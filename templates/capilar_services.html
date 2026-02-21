@@ -8,35 +8,35 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="titulo-servicio-container">
-        <h1 class="titulo-servicio">Nuestros Servicios Capilares</h1>
+      <div class="titulo-service-container">
+        <h1 class="titulo-service">Nuestros Servicios Capilares</h1>
         <p>Como quieres dar luz a tu cabello?</p>
       </div>
     </header>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+        <li><a href="{{ url_for('index') }}#start">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-        <li class="menu-servicios">
-          <a href="#servicios">SERVICIOS</a>
+        <li class="menu-services">
+          <a href="#services">SERVICIOS</a>
           <ul class="submenu">
-            <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-            <li><a href="{{ url_for('servicio_pestañas') }}">Cejas y Pestañas</a></li>
-            <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-            <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+            <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
+            <li><a href="{{ url_for('service_lashes') }}">Cejas y Pestañas</a></li>
+            <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
+            <li><a href="{{ url_for('index') }}#services">Ver todos</a></li>
           </ul>
         </li>
-        <li class="menu-promociones">
-          <a href="#promociones">PROMOCIONES</a>
+        <li class="menu-promos">
+          <a href="#promos">PROMOCIONES</a>
           <ul class="submenu">
             <li>
-              <a href="{{ url_for('index') }}#promociones">Promociones</a>
+              <a href="{{ url_for('index') }}#promos">Promociones</a>
             </li>
-            <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+            <li><a href="{{ url_for('promos') }}">Ver todas</a></li>
           </ul>
         </li>
-        <li class="menu-contacto">
-          <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+        <li class="menu-contact">
+          <a href="{{ url_for('index') }}#contact">CONTACTO</a>
           <ul class="submenu">
             <li>
               <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
@@ -51,7 +51,7 @@
             <li>
               <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
             </li>
-            <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+            <li><a href="{{ url_for('index') }}#contact">Contacto</a></li>
           </ul>
         </li>
       </ul>
@@ -66,8 +66,8 @@
       </div>
     </nav>
     <main>
-      <section class="servicios-cards">
-        <div class="card-servicio">
+      <section class="services-cards">
+        <div class="card-service">
           <img src="/static/images/Keratina_1.jpeg" alt="Servicio capilar" />
           <div class="contenido-card">
             <h2>Nano</h2>
@@ -80,7 +80,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Nano."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20keratina%20Nano."
               target="_blank"
               class="btn-reserva"
             >
@@ -88,7 +88,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Keratina_2.jpeg" alt="Servicio capilar" />
           <div class="contenido-card">
             <h2>Japonesa</h2>
@@ -101,7 +101,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Japonesa."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20keratina%20Japonesa."
               target="_blank"
               class="btn-reserva"
             >
@@ -109,7 +109,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Keratina_3.jpeg" alt="Servicio capilar" />
           <div class="contenido-card">
             <h2>Brasileña</h2>
@@ -122,7 +122,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Brasileña."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20keratina%20Brasileña."
               target="_blank"
               class="btn-reserva"
             >
@@ -130,7 +130,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Keratina_4.jpeg" alt="Servicio de uñas" />
           <div class="contenido-card">
             <h2>Células</h2>
@@ -143,7 +143,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20keratina%20Células."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20keratina%20Células."
               target="_blank"
               class="btn-reserva"
             >
@@ -151,7 +151,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Capilares.webp" alt="Servicio de uñas" />
           <div class="contenido-card">
             <h2>Colágeno</h2>
@@ -164,7 +164,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Colágeno."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20capilar%20Colágeno."
               target="_blank"
               class="btn-reserva"
             >
@@ -172,7 +172,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Capilares.webp" alt="Servicio de uñas" />
           <div class="contenido-card">
             <h2>Botox</h2>
@@ -185,7 +185,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20capilar%20Botox."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20capilar%20Botox."
               target="_blank"
               class="btn-reserva"
             >
@@ -229,7 +229,7 @@
     <script>
       document
         .querySelectorAll(
-          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+          ".menu-services > a, .menu-promos > a, .menu-contact > a"
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {

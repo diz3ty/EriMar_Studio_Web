@@ -8,35 +8,35 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="titulo-servicio-container">
-        <h1 class="titulo-servicio">Nuestros Servicios de Cejas yPestañas</h1>
+      <div class="titulo-service-container">
+        <h1 class="titulo-service">Nuestros Servicios de Cejas yPestañas</h1>
         <p>Como quieres relucir tu mirada?</p>
       </div>
     </header>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="{{ url_for('index') }}#inicio">INICIO</a></li>
+        <li><a href="{{ url_for('index') }}#start">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#nosotros">NOSOTROS</a></li>
-        <li class="menu-servicios">
-          <a href="#servicios">SERVICIOS</a>
+        <li class="menu-services">
+          <a href="#services">SERVICIOS</a>
           <ul class="submenu">
-            <li><a href="{{ url_for('servicio_uñas') }}">Uñas</a></li>
-            <li><a href="{{ url_for('servicio_pestañas') }}">Cejas y Pestañas</a></li>
-            <li><a href="{{ url_for('servicio_capilares') }}">Capilares</a></li>
-            <li><a href="{{ url_for('index') }}#servicios">Ver todos</a></li>
+            <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
+            <li><a href="{{ url_for('service_lashes') }}">Cejas y Pestañas</a></li>
+            <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
+            <li><a href="{{ url_for('index') }}#services">Ver todos</a></li>
           </ul>
         </li>
-        <li class="menu-promociones">
-          <a href="#promociones">PROMOCIONES</a>
+        <li class="menu-promos">
+          <a href="#promos">PROMOCIONES</a>
           <ul class="submenu">
             <li>
-              <a href="{{ url_for('index') }}#promociones">Promociones</a>
+              <a href="{{ url_for('index') }}#promos">Promociones</a>
             </li>
-            <li><a href="{{ url_for('promociones') }}">Ver todas</a></li>
+            <li><a href="{{ url_for('promos') }}">Ver todas</a></li>
           </ul>
         </li>
-        <li class="menu-contacto">
-          <a href="{{ url_for('index') }}#contacto">CONTACTO</a>
+        <li class="menu-contact">
+          <a href="{{ url_for('index') }}#contact">CONTACTO</a>
           <ul class="submenu">
             <li>
               <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
@@ -51,7 +51,7 @@
             <li>
               <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
             </li>
-            <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+            <li><a href="{{ url_for('index') }}#contact">Contacto</a></li>
           </ul>
         </li>
       </ul>
@@ -66,8 +66,8 @@
       </div>
     </nav>
     <main>
-      <section class="servicios-cards">
-        <div class="card-servicio">
+      <section class="services-cards">
+        <div class="card-service">
           <img src="/static/images/Lifting.jpg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Lifting</h2>
@@ -78,7 +78,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Lifting."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Lifting."
               target="_blank"
               class="btn-reserva"
             >
@@ -86,7 +86,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Clasicas_1.jpeg"
             alt="Servicio de pestañas"
@@ -100,7 +100,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Clasicas."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Clasicas."
               target="_blank"
               class="btn-reserva"
             >
@@ -108,7 +108,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Volumen_2.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Volumen</h2>
@@ -119,7 +119,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Volumen."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Volumen."
               target="_blank"
               class="btn-reserva"
             >
@@ -127,7 +127,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Mega_volumen_1.jpeg"
             alt="Servicio de pestañas"
@@ -141,7 +141,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Mega%20Volumen."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Mega%20Volumen."
               target="_blank"
               class="btn-reserva"
             >
@@ -149,7 +149,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Wispy_1.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Wispy</h2>
@@ -160,7 +160,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Wispy."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Wispy."
               target="_blank"
               class="btn-reserva"
             >
@@ -168,7 +168,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Hawaiano_1.jpeg"
             alt="Servicio de pestañas"
@@ -182,7 +182,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Hawaiano."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Hawaiano."
               target="_blank"
               class="btn-reserva"
             >
@@ -190,7 +190,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Camelina_1.jpeg"
             alt="Servicio de pestañas"
@@ -204,7 +204,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Camelina."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Camelina."
               target="_blank"
               class="btn-reserva"
             >
@@ -212,7 +212,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Egipcias_1.jpeg"
             alt="Servicio de pestañas"
@@ -226,7 +226,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Egipcias."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Egipcias."
               target="_blank"
               class="btn-reserva"
             >
@@ -234,7 +234,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Griego_2.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Griego</h2>
@@ -245,7 +245,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Griego."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Griego."
               target="_blank"
               class="btn-reserva"
             >
@@ -253,7 +253,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img src="/static/images/Feather_1.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Feather</h2>
@@ -264,7 +264,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Pestañas%20Feather."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Pestañas%20Feather."
               target="_blank"
               class="btn-reserva"
             >
@@ -272,7 +272,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Laminado_ceja_1.jpeg"
             alt="Servicio de cejas"
@@ -285,7 +285,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Basico."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Laminado%20de%20cejas%20Basico."
               target="_blank"
               class="btn-reserva"
             >
@@ -293,7 +293,7 @@
             </a>
           </div>
         </div>
-        <div class="card-servicio">
+        <div class="card-service">
           <img
             src="/static/images/Laminado_ceja_2.jpeg"
             alt="Servicio de cejas"
@@ -306,7 +306,7 @@
           </div>
           <div class="cta-container">
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20servicio%20de%20Laminado%20de%20cejas%20Lux."
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20service%20de%20Laminado%20de%20cejas%20Lux."
               target="_blank"
               class="btn-reserva"
             >
@@ -343,7 +343,7 @@
     <script>
       document
         .querySelectorAll(
-          ".menu-servicios > a, .menu-promociones > a, .menu-contacto > a"
+          ".menu-services > a, .menu-promos > a, .menu-contact > a"
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {
