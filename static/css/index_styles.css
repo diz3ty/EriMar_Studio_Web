@@ -67,6 +67,7 @@ main {
   gap: 1rem;
   margin-top: 3rem;
   box-sizing: border-box;
+  margin-right: 1rem;
 }
 
 /* logo */
@@ -82,7 +83,7 @@ main {
 /* navigation links */
 .nav-links {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   list-style: none;
   margin: 1rem;
   padding: 0;
