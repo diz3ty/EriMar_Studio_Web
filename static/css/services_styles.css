@@ -20,7 +20,7 @@ main {
 
 /* Header  Styles */
 .main-header {
-  background-image: url("/static/images/Portada.jpg"); /* fondo elegante */
+  background-image: url("/static/images/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,11 +41,12 @@ main {
   gap: 1rem;
   margin-top: 3rem;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .nav-links {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   list-style: none;
   margin: 1rem;
   padding: 0;
@@ -107,8 +108,8 @@ main {
 }
 
 .titulo-service {
-  font-size: 2.5rem;
-  color: #ffe6f8;
+  font-size: 4rem;
+  color: #6c2a6a;
   margin-bottom: 1rem;
   font-weight: bold;
   text-align: center;

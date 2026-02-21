@@ -23,26 +23,27 @@
       </div>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="#start">INICIO</a></li>
-          <li><a href="#weare">NOSOTROS</a></li>
+          <li><a href="{{ url_for('index') }}">INICIO</a></li>
+          <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
           <li class="menu-services">
             <a href="#services">SERVICIOS</a>
             <ul class="submenu">
-              <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
-              <li><a href="{{ url_for('service_lashes') }}">Cejas y Pestañas</a></li>
-              <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
-              <li><a href="{{ url_for('index') }}#services">Ver todos</a></li>
+              <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">CEJAS Y PESTAÑAS</a></li>
+              <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
+              <li><a href="{{ url_for('index') }}#services">VER TODO</a></li>
             </ul>
           </li>
           <li class="menu-promos">
             <a href="#promos">PROMOCIONES</a>
             <ul class="submenu">
               <li>
-                <a href="{{ url_for('index') }}#promos">Promociones</a>
+                <a href="{{ url_for('index') }}#promos">PROMOCIONES</a>
               </li>
-              <li><a href="{{ url_for('promos') }}">Ver todas</a></li>
+              <li><a href="{{ url_for('promos') }}">VER TODO</a></li>
             </ul>
           </li>
+          <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
           <li class="menu-contact">
             <a href="{{ url_for('index') }}#contact">CONTACTO</a>
             <ul class="submenu">
@@ -61,7 +62,7 @@
                   >WhatsApp</a
                 >
               </li>
-              <li><a href="{{ url_for('index') }}#contact">Contacto</a></li>
+              <li><a href="{{ url_for('index') }}#contact">CONTACTO</a></li>
             </ul>
           </li>
         </ul>
