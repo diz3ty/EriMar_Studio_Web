@@ -479,8 +479,8 @@ main { padding: 1rem; }
 
 @media (max-width: 900px) {
   .hamburger { display: block; position: absolute; right: 1rem; top: 1rem; z-index: 300; }
-  /* Hide nav links initially behind hamburger */
-  .navbar .nav-links { display: none; }
+  /* Hide nav links initially only when a hamburger button exists immediately before */
+  .navbar > .hamburger + .nav-links { display: none; }
   /* When nav has class nav-open show links */
   .navbar.nav-open .nav-links { display: flex; flex-direction: column; gap: 0.6rem; background: var(--bg-1); padding: 0.5rem 0; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
   .navbar.nav-open .cta-container { display: flex; }
