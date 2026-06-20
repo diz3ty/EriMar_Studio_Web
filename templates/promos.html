@@ -23,6 +23,7 @@
         <h1 class="titulo-service">PROMOCIONES</h1>
       </div>
       <nav class="navbar">
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="{{ url_for('index') }}">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
@@ -69,8 +70,9 @@
       </nav>
     </header>
     <main>
-      <section class="promos" id="promos">
-        <div class="promos-container">
+      <section class="cards-slider promos" id="promos">
+        <button class="slider-btn prev" aria-label="Anterior">‹</button>
+        <div class="slider-track">
           <div class="promo-card">
             <img src="/static/images/Promo_Jun_01.jpeg" alt="Promo_Jun_01"/>
             <div class="cta-container">
@@ -121,6 +123,7 @@
             </a>
           </div>
         </div>
+        <button class="slider-btn next" aria-label="Siguiente">›</button>
       </section>
     </main>
     <footer class="main-footer">

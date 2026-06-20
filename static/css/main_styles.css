@@ -115,7 +115,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
 .promo-card:hover {
   transform: scale(1.04) translateY(-8px);
   box-shadow: 0 28px 60px rgba(0,0,0,.24);
-  background-color: #fff0f9;
+  background-color: var(--bg-1);
   z-index: 120;
 }
 .promo-card img {
@@ -176,7 +176,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
   color: var(--accent);
   display: inline-block;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   text-align: center;
 }
@@ -317,7 +317,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
   .weare-container { flex-direction:column; text-align:center; }
   .weare-image { text-align:center; margin-top:1.5rem; }
   .services-container { flex-direction:column; align-items:stretch; gap:2.5rem; }
-  .service { width:100%; max-width:100%; padding:2rem 1rem; box-sizing:border-box; background-color:#fff0f9; border-radius:12px; margin:0 auto; text-align:center; }
+  .service { width:100%; max-width:100%; padding:2rem 1rem; box-sizing:border-box; background-color:var(--bg-1); border-radius:12px; margin:0 auto; text-align:center; }
   .promos-container { flex-direction:column; align-items:center; }
   .location-container { flex-direction:column; align-items:center; text-align:center; }
 }
@@ -409,7 +409,7 @@ main { padding: 1rem; }
 
 .promos-container { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
   .promo-card { border-radius: 8px; padding: 1rem; max-width: 560px; transition: transform 0.45s ease, box-shadow 0.45s ease, background-color 0.45s ease; }
-  .promo-card:hover { transform: scale(1.12) translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); background-color: #fff0f9; z-index: 100; }
+  .promo-card:hover { transform: scale(1.12) translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); background-color: var(--bg-1); z-index: 100; }
   .promo-card img { display:block; max-width:100%; width:auto; height:auto; max-height:420px; object-fit:contain; object-position:center; border-radius: 8px; margin-bottom: 1rem; }
 .promo-card h3 { font-size: 1.5rem; color: #6c2a6a; margin-bottom: 1rem; }
 .promo-card p { font-size: 1rem; color: #333; margin-bottom: 1rem; }
@@ -433,7 +433,7 @@ main { padding: 1rem; }
   .consejos_consideraciones { padding: 1rem; margin: 1rem; text-size-adjust: auto; }
   .promos-container { flex-direction: column; align-items: center; }
   .promo-card { max-width: 100%; text-align: center; }
-  .promo-card:hover { transform: scale(1.2) translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); background-color: #fff0f9; z-index: 100; }
+  .promo-card:hover { transform: scale(1.2) translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); background-color: var(--bg-1); z-index: 100; }
   .promo-card img { max-width: 90%; border-radius: 6px; }
   .promo-card h3 { font-size: 1.2rem; text-align: center; }
   .btn-promo { font-size: 1rem; padding: 10px 16px; display: block; margin: 1rem auto 0 auto; text-align: center; }
@@ -451,6 +451,39 @@ main { padding: 1rem; }
 .consejos_consideraciones h2 {
   border-bottom: none !important;
   padding-bottom: 0 !important;
+}
+
+/* Header / Navbar: mobile adjustments so menu doesn't overflow */
+@media (max-width: 900px) {
+  .main-header { padding: 0.6rem 1rem; }
+  .logo { margin: 0.4rem auto; max-height: 90px; }
+  .navbar { display: flex; flex-direction: column; align-items: stretch; gap: 0.5rem; padding: 0; }
+  .nav-links { display: flex; flex-direction: column; gap: 0.4rem; padding: 0 0.5rem; margin: 0; width: 100%; justify-content: center; }
+  .nav-links li { margin: 0; }
+  .nav-links li a { white-space: normal; text-align: center; font-size: 0.95rem; }
+  .cta-container { width: 100%; display: flex; justify-content: center; margin: 0.4rem 0; }
+  .btn-reserva { padding: 0.6rem 1rem; font-size: 0.95rem; }
+  .main-header .titulo-service-container { position: static; left: auto; top: auto; transform: none; margin-top: 0.25rem; }
+}
+
+@media (max-width: 480px) {
+  .nav-links li a { font-size: 0.9rem; padding: 0.25rem 0.5rem; }
+  .logo { max-height: 72px; }
+  .titulo-service { font-size: 1.6rem; }
+  .navbar { gap: 0.25rem; }
+}
+
+/* Hamburger menu styles */
+.hamburger { display: none; background: transparent; border: none; font-size: 1.4rem; padding: 0.25rem 0.5rem; cursor: pointer; color: var(--accent); }
+.hamburger:focus { outline: 2px solid var(--accent); }
+
+@media (max-width: 900px) {
+  .hamburger { display: block; position: absolute; right: 1rem; top: 1rem; z-index: 300; }
+  /* Hide nav links initially behind hamburger */
+  .navbar .nav-links { display: none; }
+  /* When nav has class nav-open show links */
+  .navbar.nav-open .nav-links { display: flex; flex-direction: column; gap: 0.6rem; background: var(--bg-1); padding: 0.5rem 0; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+  .navbar.nav-open .cta-container { display: flex; }
 }
 
 /* Slider for service cards */
@@ -492,10 +525,39 @@ main { padding: 1rem; }
   justify-content: center;
   font-size: 1.6rem;
   color: var(--accent);
-  z-index: 200;
+  z-index: 2147483647 !important; /* force front above all elements in Chrome */
+  pointer-events: auto !important; /* ensure it receives hover/pointer events */
+  -webkit-transform: translateZ(0); /* promote to its own layer */
+  transform: translateZ(0);
 }
 .slider-btn.prev { left: 8px; }
 .slider-btn.next { right: 8px; }
+
+/* Hide internal slider buttons (we'll create fixed overlay buttons on body) */
+.cards-slider .slider-btn { visibility: hidden; pointer-events: none; }
+
+/* Fixed overlay buttons appended to body - always on top */
+.slider-btn-fixed {
+  position: fixed;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent);
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+  transform: translateY(-50%);
+}
+.slider-btn-fixed.left { left: 12px; }
+.slider-btn-fixed.right { right: 12px; }
+.slider-btn-fixed:active { transform: translateY(-50%) scale(0.98); }
 
 @media (max-width: 900px) {
   .slider-track .promo-card { flex: 0 0 260px; min-width: 220px; }
