@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cejas y Pestañas</title>
-    <link rel="stylesheet" href="/static/css/services_styles.css" />
+    <title>PESTAÑAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" />
   </head>
   <body>
     <header class="main-header">
-      <div class="titulo-service-container">
-        <h1 class="titulo-service">CEJAS Y PESTAÑAS</h1>
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
+          alt="EriMar Studio"
+          class="logo"
+          width="250"
+          height="150"
+          loading="lazy"
+          srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x"
+        />
       </div>
-    </header>
-    <nav class="navbar">
+      <div class="titulo-service-container">
+        <h1 class="titulo-service">PESTAÑAS</h1>
+      </div>
+      <nav class="navbar">
       <ul class="nav-links">
         <li><a href="{{ url_for('index') }}">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
@@ -20,19 +30,12 @@
           <a href="#services">SERVICIOS</a>
           <ul class="submenu">
             <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
-            <li><a href="{{ url_for('service_lashes') }}">CEJAS Y PESTAÑAS</a></li>
+            <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
             <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
-            <li><a href="{{ url_for('index') }}#services">VER TODO</a></li>
           </ul>
         </li>
         <li class="menu-promos">
-          <a href="#promos">PROMOCIONES</a>
-          <ul class="submenu">
-            <li>
-              <a href="{{ url_for('index') }}#promos">PROMOCIONES</a>
-            </li>
-            <li><a href="{{ url_for('promos') }}">VER TODO</a></li>
-          </ul>
+          <a href="{{ url_for('promos') }}">PROMOCIONES</a>
         </li>
         <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
         <li class="menu-contact">
@@ -51,7 +54,6 @@
             <li>
               <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
             </li>
-            <li><a href="{{ url_for('index') }}#contact">CONTACTO</a></li>
           </ul>
         </li>
       </ul>
@@ -64,10 +66,13 @@
           Reservar cita
         </a>
       </div>
-    </nav>
+      </nav>
+    </header>
     <main>
-      <section class="services-cards">
-        <div class="card-service">
+      <section class="cards-slider" aria-label="Servicios">
+        <button class="slider-btn prev" aria-label="Anterior">‹</button>
+        <div class="slider-track">
+        <div class="promo-card">
           <img src="/static/images/Lifting.jpg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Lifting</h2>
@@ -86,7 +91,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Clasicas_1.jpeg"
             alt="Servicio de pestañas"
@@ -108,7 +113,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img src="/static/images/Volumen_2.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Volumen</h2>
@@ -127,7 +132,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Mega_volumen_1.jpeg"
             alt="Servicio de pestañas"
@@ -149,7 +154,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img src="/static/images/Wispy_1.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Wispy</h2>
@@ -168,7 +173,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Hawaiano_1.jpeg"
             alt="Servicio de pestañas"
@@ -190,7 +195,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Camelina_1.jpeg"
             alt="Servicio de pestañas"
@@ -212,7 +217,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Egipcias_1.jpeg"
             alt="Servicio de pestañas"
@@ -234,7 +239,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img src="/static/images/Griego_2.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Griego</h2>
@@ -253,7 +258,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img src="/static/images/Feather_1.jpeg" alt="Servicio de pestañas" />
           <div class="contenido-card">
             <h2>Feather</h2>
@@ -272,7 +277,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Laminado_ceja_1.jpeg"
             alt="Servicio de cejas"
@@ -293,7 +298,7 @@
             </a>
           </div>
         </div>
-        <div class="card-service">
+        <div class="promo-card">
           <img
             src="/static/images/Laminado_ceja_2.jpeg"
             alt="Servicio de cejas"
@@ -314,6 +319,7 @@
             </a>
           </div>
         </div>
+        <button class="slider-btn next" aria-label="Siguiente">›</button>
       </section>
       <section class="consejos_consideraciones">
         <h2>Consejos y Consideraciones</h2>
@@ -340,6 +346,7 @@
     <footer class="main-footer">
       <p>&copy; 2024 EriMar Studio. Todos los derechos reservados.</p>
     </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script>
       document
         .querySelectorAll(
@@ -347,8 +354,11 @@
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {
-            e.preventDefault();
             const submenu = this.nextElementSibling;
+            if (!submenu || !submenu.classList || !submenu.classList.contains("submenu")) {
+              return;
+            }
+            e.preventDefault();
 
             if (submenu.style.display === "block") {
               submenu.style.display = "none";

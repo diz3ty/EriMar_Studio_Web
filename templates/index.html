@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>EriMar Studio</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/index_styles.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" />
   </head>
   <body>
     <header class="main-header">
@@ -29,19 +26,12 @@
             <a href="#services">SERVICIOS</a>
             <ul class="submenu">
               <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
-              <li><a href="{{ url_for('service_lashes') }}">CEJAS Y PESTAÑAS</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
               <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
-              <li><a href="{{ url_for('index') }}#services">VER TODO</a></li>
             </ul>
           </li>
           <li class="menu-promos">
-            <a href="#promos">PROMOCIONES</a>
-            <ul class="submenu">
-              <li>
-                <a href="{{ url_for('index') }}#promos">PROMOCIONES</a>
-              </li>
-              <li><a href="{{ url_for('promos') }}">VER TODO</a></li>
-            </ul>
+            <a href="{{ url_for('promos') }}#promos">PROMOCIONES</a>
           </li>
           <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
           <li class="menu-contact">
@@ -62,7 +52,6 @@
                   >WhatsApp</a
                 >
               </li>
-              <li><a href="{{ url_for('index') }}#contact">CONTACTO</a></li>
             </ul>
           </li>
         </ul>
@@ -78,9 +67,14 @@
     </header>
     <main>
       <section class="start" id="start">
-        <div class="start-overlay">
-          <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
-          <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+        <div class="hero-grid">
+          <div class="hero-text start-overlay">
+            <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
+            <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+          </div>
+          <div class="hero-slides" aria-hidden="true">
+            <img class="slide active" src="{{ url_for('static', filename='images/EriMaruñas_main.png') }}" alt="" loading="lazy" />
+          </div>
         </div>
       </section>
       <section class="weare" id="weare">
@@ -116,7 +110,7 @@
           <a href="{{ url_for('service_lashes') }}" class="service-link">
             <div class="service">
               <img src="/static/images/Pestañas.jpeg" alt="Pestañas" />
-              <h3>CEJAS Y PESTAÑAS</h3>
+              <h3>PESTAÑAS</h3>
             </div>
           </a>
           <a href="{{ url_for('service_capilar') }}" class="service-link">
@@ -131,11 +125,10 @@
         <h2>PROMOCIONES DL MES</h2>
         <div class="promos-container">
           <div class="promo-card">
-            <h3>Paquete Mirada Perfecta</h3>
-            <img src="/static/images/Paquete_mirada_perfecta.jpeg" alt="Paquete_mirada_perfecta"/>
+            <img src="/static/images/Promo_Jun_03.jpeg" alt="Paquete_1"/>
             <div class="cta-container">
               <a
-                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20mirada%20perfecta"
+                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_01"
                 class="btn-promo"
               >
                 Quiero esta promo
@@ -143,20 +136,18 @@
             </div>
           </div>
           <div class="promo-card">
-            <h3>Paquete Amor Propio</h3>
-            <img src="/static/images/Paquete_amor_propio.jpeg" alt="Paquete_amor_propio"/>
+            <img src="/static/images/Promo_Jun_04.jpeg" alt="Paquete_2"/>
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20amor%20propio"
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_02"
               class="btn-promo"
             >
               Quiero esta promo
             </a>
           </div>
           <div class="promo-card">
-            <h3>Paquete Love Total</h3>
-            <img src="/static/images/Paquete_love_total.jpeg" alt="Paquete_love_total"/>
+            <img src="/static/images/Promo_Jun_05.jpeg" alt="Paquete_3"/>
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20love%20total"
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_03"
               class="btn-promo"
             >
               Quiero esta promo
@@ -180,9 +171,20 @@
               >
             </p>
             <p>Visítanos y vive la experiencia en EriMar Studio.</p>
-            <a href="https://maps.app.goo.gl/MZTjKYDnnuxyWogG8" class="btn-map"
-              >📍 Ver en Google Maps</a
-            >
+          </div>
+          <div class="location-image">
+            <iframe
+              src="https://maps.google.com/maps?q=Av.%20Pablo%20Cabrera%2C%20San%20Juan%20del%20R%C3%ADo%2C%20Qro%2C%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="600"
+              height="350"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <noscript>
+              <img src="/static/images/map.png" alt="Mapa de EriMar Studio" loading="lazy" />
+            </noscript>
           </div>
         </div>
       </section>
@@ -230,7 +232,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <p>&copy; 2026 EriMar Studio - erimarstudio.com</p>
+      <p>&copy; 2025 EriMar Studio - erimarstudio.com</p>
     </footer>
     <script>
       document
@@ -239,8 +241,12 @@
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {
-            e.preventDefault();
             const submenu = this.nextElementSibling;
+            // If there is no submenu, allow the link to navigate normally
+            if (!submenu || !submenu.classList || !submenu.classList.contains("submenu")) {
+              return;
+            }
+            e.preventDefault();
 
             if (submenu.style.display === "block") {
               submenu.style.display = "none";
@@ -254,6 +260,69 @@
             submenu.style.display = "block";
           });
         });
+    </script>
+    <script>
+      /*
+       Hero slider — Edit the `images` array below to change which images are shown.
+       - Use Flask `url_for('static', filename='images/FILE.jpg')` for paths.
+       - Order in the array is the rotation order.
+       - To change the interval, modify `INTERVAL_MS` (milliseconds).
+      */
+      (function () {
+        const INTERVAL_MS = 3000; // 3000ms = 3 seconds (slide interval)
+
+        // === Edit this list to change the images shown in the hero ===
+        const images = [
+          "{{ url_for('static', filename='images/uñas_main.png') }}",
+          "{{ url_for('static', filename='images/pestañas_main.png') }}",
+          "{{ url_for('static', filename='images/capilares_main.png') }}"
+        ];
+        // ============================================================
+
+        const startEl = document.getElementById('start');
+        if (!startEl) return;
+        const slidesContainer = startEl.querySelector('.hero-slides');
+        if (!slidesContainer) return;
+
+        // Build slides track from the images array
+        slidesContainer.innerHTML = '<div class="slides-track"></div>';
+        const track = slidesContainer.querySelector('.slides-track');
+
+        // Preload and create slide elements
+        images.forEach((src) => {
+          const img = document.createElement('img');
+          img.className = 'slide';
+          img.src = src;
+          img.alt = '';
+          img.loading = 'lazy';
+          track.appendChild(img);
+          const pre = new Image(); pre.src = src;
+        });
+
+        let current = 0;
+        const total = images.length;
+
+        function show(index) {
+          const x = -index * 100;
+          track.style.transform = `translateX(${x}%)`;
+        }
+
+        // Start automatic sliding
+        let timer = null;
+        if (total > 1) {
+          timer = setInterval(() => {
+            current = (current + 1) % total;
+            show(current);
+          }, INTERVAL_MS);
+        }
+
+        // Pause on hover
+        startEl.addEventListener('mouseenter', () => { if (timer) { clearInterval(timer); timer = null; } });
+        startEl.addEventListener('mouseleave', () => { if (!timer && total > 1) timer = setInterval(() => { current = (current + 1) % total; show(current); }, INTERVAL_MS); });
+
+        // expose a first render
+        show(0);
+      })();
     </script>
   </body>
 </html>

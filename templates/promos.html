@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promociones</title>
-    <link rel="stylesheet" href="/static/css/services_styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" />
   </head>
   <body>
     <header class="main-header">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
+          alt="EriMar Studio"
+          class="logo"
+          width="250"
+          height="150"
+          loading="lazy"
+          srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x"
+        />
+      </div>
       <div class="titulo-service-container">
         <h1 class="titulo-service">PROMOCIONES</h1>
       </div>
-    </header>
-    <nav class="navbar">
+      <nav class="navbar">
       <ul class="nav-links">
         <li><a href="{{ url_for('index') }}">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
@@ -20,19 +30,12 @@
           <a href="#services">SERVICIOS</a>
           <ul class="submenu">
             <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
-            <li><a href="{{ url_for('service_lashes') }}">CEJAS Y PESTAÑAS</a></li>
+            <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
             <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
-            <li><a href="{{ url_for('index') }}#services">VER TODO</a></li>
           </ul>
         </li>
         <li class="menu-promos">
-          <a href="#promos">PROMOCIONES</a>
-          <ul class="submenu">
-            <li>
-              <a href="{{ url_for('index') }}#promos">PROMOCIONES</a>
-            </li>
-            <li><a href="{{ url_for('promos') }}">VER TODO</a></li>
-          </ul>
+          <a href="{{ url_for('promos') }}">PROMOCIONES</a>
         </li>
         <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
         <li class="menu-contact">
@@ -51,7 +54,6 @@
             <li>
               <a href="https://wa.me/524271668565" target="_blank">WhatsApp</a>
             </li>
-            <li><a href="{{ url_for('index') }}#contact">CONTACTO</a></li>
           </ul>
         </li>
       </ul>
@@ -64,16 +66,16 @@
           Reservar cita
         </a>
       </div>
-    </nav>
+      </nav>
+    </header>
     <main>
       <section class="promos" id="promos">
         <div class="promos-container">
           <div class="promo-card">
-            <h3>Paquete Mirada Perfecta</h3>
-            <img src="/static/images/Paquete_mirada_perfecta.jpeg" alt="Paquete_mirada_perfecta"/>
+            <img src="/static/images/Promo_Jun_01.jpeg" alt="Promo_Jun_01"/>
             <div class="cta-container">
               <a
-                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20mirada%20perfecta"
+                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20promo%20_01%20de"
                 class="btn-promo"
               >
                 Quiero esta promo
@@ -81,31 +83,28 @@
             </div>
           </div>
           <div class="promo-card">
-            <h3>Paquete Amor Propio</h3>
-            <img src="/static/images/Paquete_amor_propio.jpeg" alt="Paquete_amor_propio"/>
+            <img src="/static/images/Promo_Jun_02.jpeg" alt="Promo_Jun_02"/>
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20amor%20propio"
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20promo%20_02%20de"
               class="btn-promo"
             >
               Quiero esta promo
             </a>
           </div>
           <div class="promo-card">
-            <h3>Paquete Love Total</h3>
-            <img src="/static/images/Paquete_love_total.jpeg" alt="Paquete_love_total"/>
+            <img src="/static/images/Promo_Jun_03.jpeg" alt="Promo_Jun_03"/>
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20love%20total"
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_03"
               class="btn-promo"
             >
               Quiero esta promo
             </a>
           </div>
           <div class="promo-card">
-            <h3>Paquete Date Conmig</h3>
-            <img src="/static/images/Paquete_date_conmigo.jpeg" alt="Paquete_date_conmigo"/>
+            <img src="/static/images/Promo_Jun_04.jpeg" alt="Promo_Jun_04"/>
             <div class="cta-container">
               <a
-                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20date%20conmigo"
+                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_04"
                 class="btn-promo"
               >
                 Quiero esta promo
@@ -113,10 +112,9 @@
             </div>
           </div>
           <div class="promo-card">
-            <h3>Paquete Amigas</h3>
-            <img src="/static/images/Paquete_amigas.jpeg" alt="Paquete_amigas"/>
+            <img src="/static/images/Promo_Jun_05.jpeg" alt="Promo_Jun_05"/>
             <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20amigas"
+              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_05"
               class="btn-promo"
             >
               Quiero esta promo
@@ -135,8 +133,11 @@
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {
-            e.preventDefault();
             const submenu = this.nextElementSibling;
+            if (!submenu || !submenu.classList || !submenu.classList.contains("submenu")) {
+              return;
+            }
+            e.preventDefault();
 
             if (submenu.style.display === "block") {
               submenu.style.display = "none";
