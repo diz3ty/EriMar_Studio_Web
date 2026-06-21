@@ -225,9 +225,13 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
   .promo-card img { max-height: 280px; }
 }
 
-.location-image iframe { width: 100%; max-width: 600px; height: 350px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.location-image { position: relative; }
+.location-image iframe { width: 100%; max-width: 600px; height: auto; aspect-ratio: 16/9; min-height: 220px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); display: block; }
 
-@media (max-width:768px) { .location-image iframe { height: 240px; } }
+@media (max-width:768px) { .location-image iframe { min-height: 180px; } }
+
+.map-fallback { display: none; margin-top: 0.5rem; color: var(--accent); font-weight: bold; text-decoration: none; }
+@media (max-width: 768px) { .map-fallback { display: inline-block; } }
 
 /* ---------------------- index_styles.css content (page overrides) ---------------------- */
 /* Page-specific styles (index) */

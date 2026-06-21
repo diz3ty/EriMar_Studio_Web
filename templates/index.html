@@ -188,17 +188,20 @@
           </div>
           <div class="location-image">
             <iframe
+              id="mapIframe"
               src="https://maps.google.com/maps?q=Av.%20Pablo%20Cabrera%2C%20San%20Juan%20del%20R%C3%ADo%2C%20Qro%2C%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="600"
-              height="350"
+              width="100%"
+              height="100%"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de EriMar Studio"
             ></iframe>
             <noscript>
               <img src="/static/images/map.png" alt="Mapa de EriMar Studio" loading="lazy" />
             </noscript>
+            <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Cabrera,+San+Juan+del+R%C3%ADo,+Qro,+Mexico" target="_blank" rel="noopener">Abrir en Google Maps</a>
           </div>
         </div>
       </section>
@@ -274,6 +277,24 @@
             submenu.style.display = "block";
           });
         });
+    </script>
+    <script>
+      // If the map iframe fails to load (common with some mobile privacy/content settings),
+      // reveal the fallback link so users can open Google Maps directly.
+      (function() {
+        const iframe = document.getElementById('mapIframe');
+        const fallback = document.querySelector('.map-fallback');
+        if (!iframe || !fallback) return;
+
+        let loaded = false;
+        // If load event fires, keep fallback hidden
+        iframe.addEventListener('load', function() { loaded = true; fallback.style.display = 'none'; });
+
+        // After 6 seconds, if not loaded, show fallback (useful for iOS Safari blocking iframes)
+        setTimeout(function() {
+          if (!loaded) fallback.style.display = 'inline-block';
+        }, 6000);
+      })();
     </script>
     <script>
       /*
