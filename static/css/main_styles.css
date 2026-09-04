@@ -577,6 +577,10 @@ main { padding: 1rem; }
 }
 
 @media (max-width: 900px) {
+  .slider-track {
+    justify-content: flex-start;
+  }
+
   .slider-track .promo-card { flex: 0 0 260px; min-width: 220px; }
   .slider-btn { width: 36px; height: 36px; font-size: 1.3rem; }
   .slider-btn-fixed {
