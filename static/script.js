@@ -153,6 +153,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	initHamburgers();
 
+	// On mobile, the first tap opens the Services submenu instead of navigating.
+	document.querySelectorAll('.menu-services > a').forEach((link) => {
+		link.addEventListener('click', (event) => {
+			if (window.innerWidth > 900) return;
+			event.preventDefault();
+			event.stopImmediatePropagation();
+			const menu = link.parentElement;
+			const isOpen = menu.classList.contains('submenu-open');
+			document.querySelectorAll('.menu-services.submenu-open').forEach((item) => {
+				item.classList.remove('submenu-open');
+			});
+			if (!isOpen) menu.classList.add('submenu-open');
+		}, true);
+	});
+
 	// Close hamburger nav when resizing to wide screens
 	window.addEventListener('resize', () => {
 		if (window.innerWidth > 900) {

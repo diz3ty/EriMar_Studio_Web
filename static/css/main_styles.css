@@ -956,7 +956,7 @@ main > .titulo-service-container .titulo-service {
     min-height: 100vh;
     padding: 0.5rem 0.35rem;
     border-bottom: 0;
-    border-right: 1px solid var(--border);
+    border-right: 0;
     text-align: left;
   }
 
@@ -1018,6 +1018,13 @@ main > .titulo-service-container .titulo-service {
 
   .main-header .menu-services:hover > .submenu,
   .main-header .menu-services:focus-within > .submenu {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .main-header .menu-services.submenu-open > .submenu {
     display: block !important;
     visibility: visible;
     opacity: 1;
