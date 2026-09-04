@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
+          alt="EriMar Studio"
+          class="logo"
+          width="250"
+          height="150"
+          loading="lazy"
+        />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
+          <li class="menu-services">
+            <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
+            <ul class="submenu">
+              <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
+              <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
+            </ul>
+          </li>
+          <li class="menu-promos">
+            <a href="{{ url_for('promos') }}#promos">PROMOCIONES</a>
+          </li>
+          <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
+          <li><a href="{{ url_for('policies') }}">POLÍTICAS</a></li>
+          <li class="menu-contact">
+            <a href="{{ url_for('contact') }}">CONTACTO</a>
+            <ul class="submenu">
+              <li><a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/share/1EdKyCcACA/" target="_blank">Facebook</a></li>
+              <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="cta-container">
+          <a
+            href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+            target="_blank"
+            class="btn-reserva"
+          >
+            Reservar cita
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="titulo-service-container">
+      </div>
+      <section class="location" id="location">
+        <h2>ENCUENTRANOS EN:</h2>
+        <div class="location-container">
+          <div class="location-text">
+            <p>
+              <strong>Av. Pablo Cabrera, Col Centro, San Juan del Río, Qro, México</strong>
+            </p>
+            <p>Visítanos y vive la experiencia en EriMar Studio.</p>
+          </div>
+          <div class="location-image">
+            <iframe
+              id="mapIframe"
+              src="https://maps.google.com/maps?q=Av.%20Pablo%20Cabrera%2C%20San%20Juan%20del%20R%C3%ADo%2C%20Qro%2C%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de EriMar Studio"
+            ></iframe>
+            <noscript>
+              <img src="/static/images/map.png" alt="Mapa de EriMar Studio" loading="lazy" />
+            </noscript>
+            <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Cabrera,+San+Juan+del+Río,+Qro,+Mexico" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>SIGUENOS EN REDES SOCIALES</h2>
+        <p>Visitanos, regalanos tu like y comparte tu experiencia.</p>
+        <div class="iconos-redes">
+          <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" aria-label="Instagram">
+            <img src="{{ url_for('static', filename='images/instagram.webp') }}" alt="Instagram" width="32" height="32" loading="lazy" />
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/share/1EdKyCcACA/" aria-label="Facebook">
+            <img src="{{ url_for('static', filename='images/facebook.webp') }}" alt="Facebook" width="32" height="32" loading="lazy" />
+            <span>Facebook</span>
+          </a>
+          <a href="https://wa.me/524271668565" aria-label="WhatsApp">
+            <img src="{{ url_for('static', filename='images/whatsapp.webp') }}" alt="WhatsApp" width="32" height="32" loading="lazy" />
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>&copy; 2024 EriMar Studio - erimarstudio.com</p>
+    </footer>
+    <script>
+      (function() {
+        const iframe = document.getElementById('mapIframe');
+        const fallback = document.querySelector('.map-fallback');
+        if (!iframe || !fallback) return;
+        let loaded = false;
+        iframe.addEventListener('load', function() {
+          loaded = true;
+          fallback.style.display = 'none';
+        });
+        setTimeout(function() {
+          if (!loaded) fallback.style.display = 'inline-block';
+        }, 6000);
+      })();
+    </script>
+  </body>
+</html>

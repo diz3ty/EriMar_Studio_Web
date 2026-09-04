@@ -20,10 +20,9 @@
       </div>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="{{ url_for('index') }}">INICIO</a></li>
           <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
           <li class="menu-services">
-            <a href="#services">SERVICIOS</a>
+            <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
             <ul class="submenu">
               <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
               <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
@@ -34,8 +33,9 @@
             <a href="{{ url_for('promos') }}#promos">PROMOCIONES</a>
           </li>
           <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
+          <li><a href="{{ url_for('policies') }}">POLÍTICAS</a></li>
           <li class="menu-contact">
-            <a href="{{ url_for('index') }}#contact">CONTACTO</a>
+            <a href="{{ url_for('contact') }}">CONTACTO</a>
             <ul class="submenu">
               <li>
                 <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
@@ -55,25 +55,29 @@
             </ul>
           </li>
         </ul>
-        <div class="cta-container">
-          <a
-            href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-            class="btn-reserva"
-          >
-            Reservar cita
-          </a>
-        </div>
       </nav>
     </header>
     <main>
       <section class="start" id="start">
         <div class="hero-grid">
           <div class="hero-text start-overlay">
-            <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
-            <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+            <div class="slogan-copy">
+              <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
+              <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+            </div>
+            <div class="hero-cta">
+              <a
+                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+                class="btn-reserva"
+              >
+                Reservar cita
+              </a>
+            </div>
           </div>
           <div class="hero-slides" aria-hidden="true">
-            <img class="slide active" src="{{ url_for('static', filename='images/EriMaruñas_main.png') }}" alt="" loading="lazy" />
+            <img class="slide" src="{{ url_for('static', filename='images/uñas_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
+            <img class="slide" src="{{ url_for('static', filename='images/pestañas_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
+            <img class="slide" src="{{ url_for('static', filename='images/capilares_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </section>
@@ -96,155 +100,6 @@
           <div class="weare-image">
             <img src="/static/images/EriMar.jpg" alt="Nuestro estudio" />
           </div>
-        </div>
-      </section>
-      <section class="services" id="services">
-        <h2>NUESTROS SERVICIOS</h2>
-        <div class="services-container">
-          <a href="{{ url_for('service_nails') }}" class="service-link">
-            <div class="service">
-              <img src="/static/images/Uñas.jpeg" alt="Uñas" />
-              <h3>UÑAS</h3>
-            </div>
-          </a>
-          <a href="{{ url_for('service_lashes') }}" class="service-link">
-            <div class="service">
-              <img src="/static/images/Pestañas.jpeg" alt="Pestañas" />
-              <h3>PESTAÑAS</h3>
-            </div>
-          </a>
-          <a href="{{ url_for('service_capilar') }}" class="service-link">
-            <div class="service">
-              <img src="/static/images/Capilares.jpeg" alt="Capilares" />
-              <h3>CAPILARES</h3>
-            </div>
-          </a>
-        </div>
-      </section>
-      <section class="promos" id="promos">
-        <h2>PROMOCIONES DEL MES</h2>
-        <div class="promos-container">
-          <div class="promo-card">
-            <img src="/static/images/Promo_Jun_03.jpeg" alt="Paquete_1"/>
-            <div class="cta-container">
-              <a
-                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20temporada%20de%20consentir"
-                class="btn-promo"
-              >
-                Quiero esta promo
-              </a>
-            </div>
-          </div>
-          <div class="promo-card">
-            <img src="/static/images/Promo_Jun_04.jpeg" alt="Paquete_2"/>
-            <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20Glowup"
-              class="btn-promo"
-            >
-              Quiero esta promo
-            </a>
-          </div>
-          <div class="promo-card">
-            <img src="/static/images/Promo_Jun_05.jpeg" alt="Paquete_3"/>
-            <a
-              href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20Sumer%20Beauty%20Days"
-              class="btn-promo"
-            >
-              Quiero esta promo
-            </a>
-          </div>
-        </div>
-        <div class="more-promos-container">
-          <a href="{{ url_for('promos') }}" class="promos-link">
-            Ver todas
-          </a>
-        </div>
-      </section>
-      <section class="policies" id="policies">
-      <div class="policies-grid">
-          <div class="policies-title">
-            <h2>NUESTRAS POLÍTICAS</h2>
-          </div>
-          <div class="policies-image">
-            <img src="/static/images/nuestras_politicas.jpeg" alt="Nuestras políticas" loading="lazy" />
-          </div>
-          <div class="policies-content">
-            <p><strong>Consulta nuestras políticas<br>
-              para un mejor servicio.</strong></p>
-          </div>
-      </div>
-    </section>
-      <section class="location" id="location">
-        <h2>ENCUENTRANOS EN:</h2>
-        <div class="location-container">
-          <div class="location-text">
-            <p>
-              <strong
-                >Av. Pablo Cabrera, Col Centro, San Juan del Río, Qro,
-                México</strong
-              >
-            </p>
-            <p>Visítanos y vive la experiencia en EriMar Studio.</p>
-          </div>
-          <div class="location-image">
-            <iframe
-              id="mapIframe"
-              src="https://maps.google.com/maps?q=Av.%20Pablo%20Cabrera%2C%20San%20Juan%20del%20R%C3%ADo%2C%20Qro%2C%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa de EriMar Studio"
-            ></iframe>
-            <noscript>
-              <img src="/static/images/map.png" alt="Mapa de EriMar Studio" loading="lazy" />
-            </noscript>
-            <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Cabrera,+San+Juan+del+R%C3%ADo,+Qro,+Mexico" target="_blank" rel="noopener">Abrir en Google Maps</a>
-          </div>
-        </div>
-      </section>
-      <section class="contact" id="contact">
-        <h2>CONTACTANOS Y SIGUENOS EN REDES SOCIALES</h2>
-        <p>Visitanos, regalanos tu like y comparte tu experiencia.</p>
-        <div class="iconos-redes">
-          <a
-            href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ=="
-            aria-label="Instagram"
-          >
-            <img
-              src="{{ url_for('static', filename='images/instagram.webp') }}"
-              alt="Instagram"
-              width="32"
-              height="32"
-              loading="lazy"
-            />
-            <span>Instagram</span>
-          </a>
-          <a
-            href="https://www.facebook.com/share/1EdKyCcACA/"
-            aria-label="Facebook"
-          >
-            <img
-              src="{{ url_for('static', filename='images/facebook.webp') }}"
-              alt="Facebook"
-              width="32"
-              height="32"
-              loading="lazy"
-            />
-            <span>Facebook</span>
-          </a>
-          <a href="https://wa.me/524271668565" aria-label="WhatsApp">
-            <img
-              src="{{ url_for('static', filename='images/whatsapp.webp') }}"
-              alt="WhatsApp"
-              width="32"
-              height="32"
-              loading="lazy"
-            />
-            <span>WhatsApp</span>
-          </a>
         </div>
       </section>
     </main>
@@ -294,69 +149,6 @@
         setTimeout(function() {
           if (!loaded) fallback.style.display = 'inline-block';
         }, 6000);
-      })();
-    </script>
-    <script>
-      /*
-       Hero slider — Edit the `images` array below to change which images are shown.
-       - Use Flask `url_for('static', filename='images/FILE.jpg')` for paths.
-       - Order in the array is the rotation order.
-       - To change the interval, modify `INTERVAL_MS` (milliseconds).
-      */
-      (function () {
-        const INTERVAL_MS = 3000; // 3000ms = 3 seconds (slide interval)
-
-        // === Edit this list to change the images shown in the hero ===
-        const images = [
-          "{{ url_for('static', filename='images/uñas_main.png') }}",
-          "{{ url_for('static', filename='images/pestañas_main.png') }}",
-          "{{ url_for('static', filename='images/capilares_main.png') }}"
-        ];
-        // ============================================================
-
-        const startEl = document.getElementById('start');
-        if (!startEl) return;
-        const slidesContainer = startEl.querySelector('.hero-slides');
-        if (!slidesContainer) return;
-
-        // Build slides track from the images array
-        slidesContainer.innerHTML = '<div class="slides-track"></div>';
-        const track = slidesContainer.querySelector('.slides-track');
-
-        // Preload and create slide elements
-        images.forEach((src) => {
-          const img = document.createElement('img');
-          img.className = 'slide';
-          img.src = src;
-          img.alt = '';
-          img.loading = 'lazy';
-          track.appendChild(img);
-          const pre = new Image(); pre.src = src;
-        });
-
-        let current = 0;
-        const total = images.length;
-
-        function show(index) {
-          const x = -index * 100;
-          track.style.transform = `translateX(${x}%)`;
-        }
-
-        // Start automatic sliding
-        let timer = null;
-        if (total > 1) {
-          timer = setInterval(() => {
-            current = (current + 1) % total;
-            show(current);
-          }, INTERVAL_MS);
-        }
-
-        // Pause on hover
-        startEl.addEventListener('mouseenter', () => { if (timer) { clearInterval(timer); timer = null; } });
-        startEl.addEventListener('mouseleave', () => { if (!timer && total > 1) timer = setInterval(() => { current = (current + 1) % total; show(current); }, INTERVAL_MS); });
-
-        // expose a first render
-        show(0);
       })();
     </script>
   </body>

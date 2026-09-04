@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
+          alt="EriMar Studio"
+          class="logo"
+          width="250"
+          height="150"
+          loading="lazy"
+        />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
+          <li class="menu-services">
+            <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
+            <ul class="submenu">
+              <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
+              <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
+            </ul>
+          </li>
+          <li class="menu-promos">
+            <a href="{{ url_for('promos') }}#promos">PROMOCIONES</a>
+          </li>
+          <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
+          <li><a href="{{ url_for('policies') }}">POLÍTICAS</a></li>
+          <li class="menu-contact">
+            <a href="{{ url_for('contact') }}">CONTACTO</a>
+            <ul class="submenu">
+              <li><a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/share/1EdKyCcACA/" target="_blank">Facebook</a></li>
+              <li><a href="https://wa.me/524271668565" target="_blank">WhatsApp</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="cta-container">
+          <a
+            href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+            target="_blank"
+            class="btn-reserva"
+          >
+            Reservar cita
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="titulo-service-container">
+        <h1 class="titulo-service">SERVICIOS</h1>
+      </div>
+      <section class="cards-slider services" id="services" aria-label="Servicios">
+        <button class="slider-btn prev" aria-label="Anterior">‹</button>
+        <div class="slider-track">
+          <a href="{{ url_for('service_nails') }}" class="service-link promo-card">
+            <div class="service">
+              <img src="/static/images/Uñas.jpeg" alt="Uñas" />
+              <h3>UÑAS</h3>
+            </div>
+          </a>
+          <a href="{{ url_for('service_lashes') }}" class="service-link promo-card">
+            <div class="service">
+              <img src="/static/images/Pestañas.jpeg" alt="Pestañas" />
+              <h3>PESTAÑAS</h3>
+            </div>
+          </a>
+          <a href="{{ url_for('service_capilar') }}" class="service-link promo-card">
+            <div class="service">
+              <img src="/static/images/Capilares.jpeg" alt="Capilares" />
+              <h3>CAPILARES</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p>&copy; 2024 EriMar Studio - erimarstudio.com</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

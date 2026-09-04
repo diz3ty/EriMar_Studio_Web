@@ -10,6 +10,18 @@ def home():
 def index():
     return render_template('index.html')
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/policies')
+def policies():
+    return render_template('policies.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/service/nails')
 def service_nails():
     return render_template('nails_services.html')
@@ -30,5 +42,5 @@ def promos():
 def courses():
     return render_template('courses.html')
 
-#1if __name__ == "__main__":
+#if __name__ == "__main__":
 #    app.run(debug=True)

@@ -19,15 +19,11 @@
           srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x"
         />
       </div>
-      <div class="titulo-service-container">
-        <h1 class="titulo-service">PESTAÑAS</h1>
-      </div>
       <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="{{ url_for('index') }}">INICIO</a></li>
         <li><a href="{{ url_for('index') }}#weare">NOSOTROS</a></li>
         <li class="menu-services">
-          <a href="#services">SERVICIOS</a>
+          <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
           <ul class="submenu">
             <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
             <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
@@ -38,8 +34,9 @@
           <a href="{{ url_for('promos') }}">PROMOCIONES</a>
         </li>
         <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
+        <li><a href="{{ url_for('policies') }}">POLÍTICAS</a></li>
         <li class="menu-contact">
-          <a href="{{ url_for('index') }}#contact">CONTACTO</a>
+          <a href="{{ url_for('contact') }}">CONTACTO</a>
           <ul class="submenu">
             <li>
               <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
@@ -69,6 +66,9 @@
       </nav>
     </header>
     <main>
+      <div class="titulo-service-container">
+        <h1 class="titulo-service">PESTAÑAS</h1>
+      </div>
       <section class="cards-slider" aria-label="Servicios">
         <button class="slider-btn prev" aria-label="Anterior">‹</button>
         <div class="slider-track">
