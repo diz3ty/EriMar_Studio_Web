@@ -131,11 +131,13 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
 }
 
 .promo-card.promo-course-large {
-  max-width: 760px;
-  padding: 2rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
 }
 .promo-card.promo-course-large img {
-  max-height: 680px;
+  max-height: 570px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -161,8 +163,8 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
   .btn-reserva { font-size:.9rem; padding:.5rem 1rem; }
   .promo-card { max-width:100%; }
   .promo-card img { max-width:90%; }
-  .promo-card.promo-course-large { max-width: 95%; padding: 1rem; }
-  .promo-card.promo-course-large img { max-height: 420px; }
+  .promo-card.promo-course-large { max-width: 80%; margin:auto; padding: 1rem; }
+  .promo-card.promo-course-large img { max-height: 310px; }
 }
 
 .titulo-service,
@@ -172,7 +174,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
 .location h2,
 .contact h2,
 .consejos_consideraciones h2 {
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
   color: var(--accent);
   display: inline-block;
   font-size: 2rem;
@@ -212,7 +214,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
 
 .contenido-card h2 { font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem; }
 
-.location-container { display:flex; gap:1rem; align-items:center; justify-content:center; padding-top:1.5rem; }
+.location-container { display:flex; gap:1rem; align-items:center; justify-content:center; padding-top:1rem; }
 .location-text { flex:1; font-size:1rem; color:var(--muted); text-align:center; margin-top:0.5rem; }
 .location-image { flex:1; text-align:center; }
 .location-image img { width:100%; max-width:500px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.08); }
@@ -303,7 +305,7 @@ main { display:flex; flex-direction:column; align-items:center; justify-content:
 .promos-link:hover { background-color: #ffb2fb; }
 
 .location { background-color: var(--bg-2); padding: 3rem 1rem; text-align: center; width: 100%; }
-.location h2 { border-bottom: 2px solid #6c2a6a; color: #6c2a6a; font-size: 2rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; text-align: left; margin-left: 1rem; }
+.location h2 { border-bottom: 2px solid #6c2a6a; color: #6c2a6a; font-size: rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; text-align: left; margin-left: 1rem; }
 .location-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; width: 100%; margin: 0 auto; }
 .location-text { flex: 1; font-size: 1.5rem; color: #333; }
 
@@ -387,7 +389,7 @@ main { padding: 1rem; }
 .main-header { padding: 1rem 1rem; }
 
 .titulo-service-container { border-radius: 12px; max-width: 800px; margin: 0 auto 1rem; }
-.titulo-service { font-size: 4rem; color: #6c2a6a; margin: 0.25rem 0 0.75rem; font-weight: bold; text-align: center; }
+.titulo-service { font-size: 2rem; color: #6c2a6a; margin: 0.25rem 0 0.25rem; font-weight: bold; text-align: center; }
 .titulo-service-container p { font-size: 1.2rem; color: var(--accent); text-align: center; }
 
 .service-detalle { text-align: center; padding: 3rem 1rem; }
@@ -437,8 +439,8 @@ main { padding: 1rem; }
   .promos-container { flex-direction: column; align-items: center; }
   .promo-card { max-width: 100%; text-align: center; }
   .promo-card:hover { transform: scale(1.2) translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); background-color: var(--bg-1); z-index: 100; }
-  .promo-card img { max-width: 90%; border-radius: 6px; }
-  .promo-card h3 { font-size: 1.2rem; text-align: center; }
+  .promo-card img { max-width: 70%; border-radius: 6px; }
+  .promo-card h3 { font-size: 1rem; text-align: center; }
   .btn-promo { font-size: 1rem; padding: 10px 16px; display: block; margin: 1rem auto 0 auto; text-align: center; }
 }
 
@@ -743,6 +745,8 @@ main { padding: 1rem; }
   main {
     width: calc(100% - 240px);
     margin-left: 240px;
+    align-items: flex-start;
+    padding-left: 1rem;
   }
 
   .main-footer {
