@@ -23,12 +23,7 @@
       <ul class="nav-links">
         <li><a href="{{ url_for('home') }}">INICIO</a></li>
         <li class="menu-services">
-          <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
-          <ul class="submenu">
-            <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
-            <li><a href="{{ url_for('service_lashes') }}">Pestañas</a></li>
-            <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
-          </ul>
+          <a href="{{ url_for('services') }}">SERVICIOS</a>
         </li>
         <li class="menu-promos">
           <a href="{{ url_for('promos') }}">PROMOCIONES</a>

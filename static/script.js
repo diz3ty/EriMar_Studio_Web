@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.querySelectorAll('.menu-services > a').forEach((link) => {
 		link.addEventListener('click', (event) => {
 			if (link.hasAttribute('data-view-toggle')) return;
+			if (!link.nextElementSibling?.classList.contains('submenu')) return;
 			if (window.innerWidth > 900) return;
 			event.preventDefault();
 			event.stopImmediatePropagation();
