@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -12,15 +12,15 @@ def index():
 
 @app.route('/services')
 def services():
-    return render_template('services.html')
+    return redirect(url_for('home', _anchor='services-view'))
 
 @app.route('/policies')
 def policies():
-    return render_template('policies.html')
+    return redirect(url_for('home', _anchor='policies-view'))
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return redirect(url_for('home', _anchor='contact-view'))
 
 @app.route('/service/nails')
 def service_nails():
@@ -36,11 +36,11 @@ def service_capilar():
 
 @app.route('/promos')
 def promos():
-    return render_template('promos.html')
+    return redirect(url_for('home', _anchor='promos-view'))
 
 @app.route('/courses')
 def courses():
-    return render_template('courses.html')
+    return redirect(url_for('home', _anchor='courses-view'))
 
-#if __name__ == "__main__":
-#    app.run(debug=True)
+# if __name__ == "__main__":
+    # app.run(debug=True)

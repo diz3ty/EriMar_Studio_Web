@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let startX, scrollLeft;
 
 		track.addEventListener('pointerdown', (e) => {
+			if (e.target.closest('a, button, input, textarea, select, [role="button"]')) return;
 			isDown = true;
 			track.setPointerCapture(e.pointerId);
 			startX = e.clientX;
@@ -124,6 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			// Position function
 			const updateFixedPos = () => {
 				const rect = container.getBoundingClientRect();
+				const isVisible = rect.width > 0 && rect.height > 0;
+				prevFixed.style.display = isVisible ? 'flex' : 'none';
+				nextFixed.style.display = isVisible ? 'flex' : 'none';
+				if (!isVisible) return;
+
 				const y = rect.top + rect.height / 2;
 				// keep within viewport bounds
 				const top = Math.max(40, Math.min(window.innerHeight - 40, y));
@@ -134,10 +140,59 @@ document.addEventListener('DOMContentLoaded', function () {
 			updateFixedPos();
 			window.addEventListener('resize', updateFixedPos);
 			window.addEventListener('scroll', updateFixedPos, { passive: true });
+			window.addEventListener('site-view-change', updateFixedPos);
 		} catch (err) {
 			console.warn('Could not create fixed slider buttons', err);
 		}
 	});
+
+	const viewElements = new Map([
+		['home', document.getElementById('home-view')],
+		['services', document.getElementById('services-view')],
+		['promos', document.getElementById('promos-view')],
+		['courses', document.getElementById('courses-view')],
+		['policies', document.getElementById('policies-view')],
+		['contact', document.getElementById('contact-view')],
+	]);
+	const availableViews = new Map([...viewElements].filter(([, element]) => element));
+	const viewLinks = document.querySelectorAll('[data-view-toggle]');
+
+	if (availableViews.size && viewLinks.length) {
+		const setActiveView = (activeView, addHistory = false) => {
+			for (const [name, element] of availableViews) {
+				element.hidden = name !== activeView;
+			}
+
+			if (addHistory) {
+				const target = activeView === 'home'
+					? `${location.pathname}${location.search}`
+					: `#${activeView}-view`;
+				history.pushState(null, '', target);
+			}
+
+			window.dispatchEvent(new Event('site-view-change'));
+		};
+
+		viewLinks.forEach((link) => {
+			const viewName = link.dataset.viewToggle;
+			if (!availableViews.has(viewName)) return;
+
+			link.addEventListener('click', (event) => {
+				event.preventDefault();
+				setActiveView(viewName, true);
+			});
+		});
+
+		const syncActiveView = () => {
+			const hash = location.hash.slice(1);
+			const viewName = [...availableViews.keys()].find((name) => hash === `${name}-view`) || 'home';
+			setActiveView(viewName);
+		};
+
+		window.addEventListener('popstate', syncActiveView);
+		window.addEventListener('hashchange', syncActiveView);
+		syncActiveView();
+	}
 
 	// Hamburger menu toggle
 	function initHamburgers() {
@@ -156,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// On mobile, the first tap opens the Services submenu instead of navigating.
 	document.querySelectorAll('.menu-services > a').forEach((link) => {
 		link.addEventListener('click', (event) => {
+			if (link.hasAttribute('data-view-toggle')) return;
 			if (window.innerWidth > 900) return;
 			event.preventDefault();
 			event.stopImmediatePropagation();

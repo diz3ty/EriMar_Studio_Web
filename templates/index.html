@@ -22,86 +22,208 @@
         <ul class="nav-links">
           <li><a href="{{ url_for('home') }}">INICIO</a></li>
           <li class="menu-services">
-            <a href="{{ url_for('services') }}" onclick="window.location.href=this.href; return false;">SERVICIOS</a>
+            <a href="#services-view" data-view-toggle="services">SERVICIOS</a>
             <ul class="submenu">
-              <li><a href="{{ url_for('service_nails') }}">UÑAS</a></li>
-              <li><a href="{{ url_for('service_lashes') }}">PESTAÑAS</a></li>
-              <li><a href="{{ url_for('service_capilar') }}">CAPILARES</a></li>
+              <li><a href="{{ url_for('service_nails') }}">Uñas</a></li>
+              <li><a href="{{ url_for('service_lashes') }}">Pestañas</a></li>
+              <li><a href="{{ url_for('service_capilar') }}">Capilares</a></li>
             </ul>
           </li>
           <li class="menu-promos">
-            <a href="{{ url_for('promos') }}#promos">PROMOCIONES</a>
+            <a href="#promos-view" data-view-toggle="promos">PROMOCIONES</a>
           </li>
-          <li><a href="{{ url_for('courses') }}">CURSOS</a></li>
-          <li><a href="{{ url_for('policies') }}">POLÍTICAS</a></li>
+          <li><a href="#courses-view" data-view-toggle="courses">CURSOS</a></li>
+          <li><a href="#policies-view" data-view-toggle="policies">POLÍTICAS</a></li>
           <li class="menu-contact">
-            <a href="{{ url_for('contact') }}">CONTACTO</a>
-            <ul class="submenu">
-              <li>
-                <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" target="_blank"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a href="https://www.facebook.com/share/1EdKyCcACA/" target="_blank"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a href="https://wa.me/524271668565" target="_blank"
-                  >WhatsApp</a
-                >
-              </li>
-            </ul>
+            <a href="#contact-view" data-view-toggle="contact">CONTACTO</a>
           </li>
         </ul>
+        <a
+          href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
+          class="btn-reserva header-reserva"
+        >
+          Reservar cita
+        </a>
       </nav>
     </header>
     <main>
-      <section class="start" id="start">
-        <div class="hero-grid">
-          <div class="hero-text start-overlay">
-            <div class="slogan-copy">
-              <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
-              <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
-            </div>
-            <div class="hero-cta">
-              <a
-                href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20una%20cita%20en%20EriMar%20Studio"
-                class="btn-reserva"
-              >
-                Reservar cita
-              </a>
+      <div id="home-view">
+        <section class="start" id="start">
+          <div class="hero-grid">
+            <div class="hero-text start-overlay">
+              <div class="slogan-copy">
+                <h1>EN ERIMAR STUDIO ESTAMOS PARA CONSENTIRTE</h1>
+                <p>Tu belleza y cuidado personal, es nuestro objetivo principal</p>
+              </div>
             </div>
           </div>
-          <div class="hero-slides" aria-hidden="true">
-            <img class="slide" src="{{ url_for('static', filename='images/uñas_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
-            <img class="slide" src="{{ url_for('static', filename='images/pestañas_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
-            <img class="slide" src="{{ url_for('static', filename='images/capilares_main.png') }}" alt="" loading="eager" fetchpriority="high" decoding="async" />
+        </section>
+        <section class="weare" id="weare">
+          <div class="weare-container">
+            <div class="weare-text">
+              <h2>NOSOTROS</h2>
+              <p>
+                En <strong>EriMar Studio</strong> nos enfocamos en consentirte y
+                brindarte servicios de calidad. Con un ambiente cálido y un equipo
+                apasionado por el cuidado personal.
+              </p>
+              <p>
+                Desde Uñas realzando la belleza de tus manos, Pestañas que hacen
+                relucir tu mirada, y hasta tratamientos capilares dando luz a tu
+                cabello, cada detalle está pensado para que vivas un momento de
+                relajación y crezca tu confianza.
+              </p>
+            </div>
+            <div class="weare-image">
+              <img src="/static/images/EriMar.jpg" alt="Nuestro estudio" />
+            </div>
           </div>
+        </section>
+      </div>
+      <div id="services-view" hidden>
+        <div class="titulo-service-container">
+          <h1 class="titulo-service">SERVICIOS</h1>
         </div>
-      </section>
-      <section class="weare" id="weare">
-        <div class="weare-container">
-          <div class="weare-text">
-            <h2>NOSOTROS</h2>
-            <p>
-              En <strong>EriMar Studio</strong> nos enfocamos en consentirte y
-              brindarte servicios de calidad. Con un ambiente cálido y un equipo
-              apasionado por el cuidado personal.
-            </p>
-            <p>
-              Desde Uñas realzando la belleza de tus manos, Pestañas que hacen
-              relucir tu mirada, y hasta tratamientos capilares dando luz a tu
-              cabello, cada detalle está pensado para que vivas un momento de
-              relajación y crezca tu confianza.
-            </p>
+        <section class="cards-slider services" id="services" aria-label="Servicios">
+          <button class="slider-btn prev" aria-label="Anterior">‹</button>
+          <div class="slider-track">
+            <a href="{{ url_for('service_nails') }}" class="service-link promo-card">
+              <div class="service">
+                <img src="{{ url_for('static', filename='images/Uñas.jpeg') }}" alt="Uñas" />
+                <h3>UÑAS</h3>
+              </div>
+            </a>
+            <a href="{{ url_for('service_lashes') }}" class="service-link promo-card">
+              <div class="service">
+                <img src="{{ url_for('static', filename='images/Pestañas.jpeg') }}" alt="Pestañas" />
+                <h3>PESTAÑAS</h3>
+              </div>
+            </a>
+            <a href="{{ url_for('service_capilar') }}" class="service-link promo-card">
+              <div class="service">
+                <img src="{{ url_for('static', filename='images/Capilares.jpeg') }}" alt="Capilares" />
+                <h3>CAPILARES</h3>
+              </div>
+            </a>
           </div>
-          <div class="weare-image">
-            <img src="/static/images/EriMar.jpg" alt="Nuestro estudio" />
-          </div>
+          <button class="slider-btn next" aria-label="Siguiente">›</button>
+        </section>
+      </div>
+      <div id="promos-view" hidden>
+        <div class="titulo-service-container">
+          <h1 class="titulo-service">PROMOCIONES</h1>
         </div>
-      </section>
+        <section class="cards-slider promos" id="promos" aria-label="Promociones">
+          <button class="slider-btn prev" aria-label="Anterior">‹</button>
+          <div class="slider-track">
+            <div class="promo-card">
+              <img src="{{ url_for('static', filename='images/Promocion_mexicana.jpeg') }}" alt="Promoción mexicana" />
+              <div class="cta-container">
+                <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20promo%20_01%20de" class="btn-promo">Quiero esta promo</a>
+              </div>
+            </div>
+            <div class="promo-card">
+              <img src="{{ url_for('static', filename='images/Diosa_mexicana.jpeg') }}" alt="Diosa mexicana" />
+              <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20promo%20_02%20de" class="btn-promo">Quiero esta promo</a>
+            </div>
+            <div class="promo-card">
+              <img src="{{ url_for('static', filename='images/Mexico_lindo.jpeg') }}" alt="México lindo" />
+              <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_03" class="btn-promo">Quiero esta promo</a>
+            </div>
+            <div class="promo-card">
+              <img src="{{ url_for('static', filename='images/Belleza_de_catrina.jpeg') }}" alt="Belleza de catrina" />
+              <div class="cta-container">
+                <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_04" class="btn-promo">Quiero esta promo</a>
+              </div>
+            </div>
+            <div class="promo-card">
+              <img src="{{ url_for('static', filename='images/Frida_glam.jpeg') }}" alt="Frida glam" />
+              <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20un%20paquete%20_05" class="btn-promo">Quiero esta promo</a>
+            </div>
+          </div>
+          <button class="slider-btn next" aria-label="Siguiente">›</button>
+        </section>
+      </div>
+      <div id="courses-view" hidden>
+        <div class="titulo-service-container">
+          <h1 class="titulo-service">CURSOS</h1>
+        </div>
+        <section class="cards-slider promos" id="courses">
+          <div class="promos-container">
+            <div class="promo-card promo-course-large">
+              <h3>Curso pestañas</h3>
+              <img src="{{ url_for('static', filename='images/curso_pestañas.jpg') }}" alt="Curso de pestañas" />
+              <div class="cta-container">
+                <a href="https://wa.me/524271668565?text=Hola%20quiero%20agendar%20el%20curso%20de%20pestañas" class="btn-promo">Quiero este curso</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="policies-view" hidden>
+        <div class="titulo-service-container">
+          <h1 class="titulo-service">POLÍTICAS</h1>
+        </div>
+        <section class="policies" id="policies">
+          <div class="policies-grid">
+            <div class="policies-image">
+              <img src="{{ url_for('static', filename='images/nuestras_politicas.jpeg') }}" alt="Nuestras políticas" loading="eager" fetchpriority="high" />
+            </div>
+            <div class="policies-content">
+              <p><strong>Consulta nuestras políticas para un mejor servicio.</strong></p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="contact-view" hidden>
+        <div class="titulo-service-container">
+          <h1 class="titulo-service">CONTACTO</h1>
+        </div>
+        <section class="location" id="location">
+          <h2>ENCUÉNTRANOS EN:</h2>
+          <div class="location-container">
+            <div class="location-text">
+              <p><strong>Av. Pablo Cabrera, Col Centro, San Juan del Río, Qro, México</strong></p>
+              <p>Visítanos y vive la experiencia en EriMar Studio.</p>
+            </div>
+            <div class="location-image">
+              <iframe
+                id="mapIframe"
+                src="https://maps.google.com/maps?q=Av.%20Pablo%20Cabrera%2C%20San%20Juan%20del%20R%C3%ADo%2C%20Qro%2C%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de EriMar Studio"
+              ></iframe>
+              <noscript>
+                <img src="/static/images/map.png" alt="Mapa de EriMar Studio" loading="lazy" />
+              </noscript>
+              <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Cabrera,+San+Juan+del+Río,+Qro,+Mexico" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            </div>
+          </div>
+        </section>
+        <section class="contact" id="contact">
+          <h2>SÍGUENOS EN REDES SOCIALES</h2>
+          <p>Visítanos, regálanos tu like y comparte tu experiencia.</p>
+          <div class="iconos-redes">
+            <a href="https://www.instagram.com/erimar_studio?igsh=MTY3dG0ZXVpN3g3ZQ==" aria-label="Instagram">
+              <img src="{{ url_for('static', filename='images/instagram.webp') }}" alt="Instagram" width="32" height="32" loading="lazy" />
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/share/1EdKyCcACA/" aria-label="Facebook">
+              <img src="{{ url_for('static', filename='images/facebook.webp') }}" alt="Facebook" width="32" height="32" loading="lazy" />
+              <span>Facebook</span>
+            </a>
+            <a href="https://wa.me/524271668565" aria-label="WhatsApp">
+              <img src="{{ url_for('static', filename='images/whatsapp.webp') }}" alt="WhatsApp" width="32" height="32" loading="lazy" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
       <p>&copy; 2024 EriMar Studio - erimarstudio.com</p>
@@ -113,6 +235,10 @@
         )
         .forEach((link) => {
           link.addEventListener("click", function (e) {
+            if (this.hasAttribute("data-view-toggle")) {
+              return;
+            }
+
             const submenu = this.nextElementSibling;
             // If there is no submenu, allow the link to navigate normally
             if (!submenu || !submenu.classList || !submenu.classList.contains("submenu")) {
