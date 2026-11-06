@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="logo">
+      <a class="logo" href="{{ url_for('home') }}" aria-label="Ir al inicio">
         <img
           src="{{ url_for('static', filename='images/EriMar_Logo.webp') }}"
           alt="EriMar Studio"
@@ -17,7 +17,7 @@
           loading="lazy"
           srcset="{{ url_for('static', filename='images/EriMar_Logo.webp') }} 1x, {{ url_for('static', filename='images/EriMar_Logo.webp') }} 2x"
         />
-      </div>
+      </a>
       <nav class="navbar">
         <ul class="nav-links">
           <li><a href="{{ url_for('home') }}">INICIO</a></li>
